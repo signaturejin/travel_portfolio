@@ -304,6 +304,48 @@
         display: flex; justify-content: center;
         .center {
             width: 57%; background-color: #ff8119;
+            #insert_form {
+                .insert_top {
+                    display: flex; justify-content: space-between;
+                    > div {
+                        display: flex; padding: 10px 0;
+                        box-sizing: border-box;
+                        align-items: center;
+                        > div {text-align: center;}
+                    }
+                    .title_box {
+                        // background-color: pink;
+                        width: 80%;
+                        .title_text {width: 10%;}
+                        input {
+                            height: 40px; width: 70%;
+                            padding-left: 12px;
+                            border-radius: 5px;
+                            border: 1px solid #000;
+                        }
+                    }
+                    .name_box {
+                        // background-color: skyblue;
+                        // width: 40%;
+                        // .name_text {width: 15%;}
+                        .name {
+                            margin-left: 10px;
+                            background-color: #949494;
+                            color: #353535;
+                            padding: 10px 12px ;
+                            border-radius: 5px;
+                            border: 1px solid #585858;
+                        }
+                    }
+                }
+                .file_wrap {
+                    display: flex;
+                }
+                .context {
+                    padding: 12px; border: 1px solid #000;
+                    border-radius: 5px;
+                }
+            }
         }
     }
 }

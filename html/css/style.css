@@ -412,6 +412,48 @@ body {
   width: 57%;
   background-color: #ff8119;
 }
+#container .insert_wrap .center #insert_form .insert_top {
+  display: flex;
+  justify-content: space-between;
+}
+#container .insert_wrap .center #insert_form .insert_top > div {
+  display: flex;
+  padding: 10px 0;
+  box-sizing: border-box;
+  align-items: center;
+}
+#container .insert_wrap .center #insert_form .insert_top > div > div {
+  text-align: center;
+}
+#container .insert_wrap .center #insert_form .insert_top .title_box {
+  width: 80%;
+}
+#container .insert_wrap .center #insert_form .insert_top .title_box .title_text {
+  width: 10%;
+}
+#container .insert_wrap .center #insert_form .insert_top .title_box input {
+  height: 40px;
+  width: 70%;
+  padding-left: 12px;
+  border-radius: 5px;
+  border: 1px solid #000;
+}
+#container .insert_wrap .center #insert_form .insert_top .name_box .name {
+  margin-left: 10px;
+  background-color: #949494;
+  color: #353535;
+  padding: 10px 12px;
+  border-radius: 5px;
+  border: 1px solid #585858;
+}
+#container .insert_wrap .center #insert_form .file_wrap {
+  display: flex;
+}
+#container .insert_wrap .center #insert_form .context {
+  padding: 12px;
+  border: 1px solid #000;
+  border-radius: 5px;
+}
 
 #login {
   height: 100vh;

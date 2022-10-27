@@ -26,8 +26,11 @@
                             <p class="name"><%- userData.member_name %></p>
                         </div>
                     </div>
-                    <input type="file" class="file" name="file" placeholder="thumbnail">
-                    <textarea class="context" name="context"></textarea>
+                    <div class="file_wrap">
+                        <p class="file_text">대표사진</p>
+                        <input type="file" class="file" name="file" placeholder="thumbnail">
+                    </div>
+                    <textarea class="context" name="context" placeholder="내용을 입력해주세요.."></textarea>
                     <button type="submit">작성하기</button>
                 </form>
             </div>
@@ -36,3 +39,4 @@
     <%- include("common/footer.ejs"); %>
 </body>
 </html>
+<!-- insert_top width값 전부 수정 -->
