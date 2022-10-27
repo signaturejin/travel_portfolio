@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>목록페이지</title>
+    <%- include("common/font_icon.ejs"); %>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include("common/header.ejs"); %>
+    <div id="container">
+        <%- include("common/banner.ejs"); %>
+        <div class="travel_list">
+            <div class="center">
+                <div class="list_wrap">
+                    <div class="text_box">
+                        <h2 class="title">여행후기</h2>
+                        <p class="subtitle">직접 경험한 멋진 풍경들을 같이 공유해봐요.</p>
+                    </div>
+                    <% for(let i=0; i<brdData.length; i++){ %>
+                    <div class="list_box">
+                        <div class="left">
+                            <div class="name_date">
+                                <p class="user_name"><%- brdData[i].user_name %></p>
+                                <p class="user_date"><%- brdData[i].insert_date.substr(0,10) %></p>
+                            </div>
+                            <div class="title_text">
+                                <h3 class="user_title"><a href="/detail/<%- brdData[i].brd_no %>"><%- brdData[i].user_title %></a></h3>
+                                <p class="user_context"><%- brdData[i].user_context %></p>
+                            </div>
+                            <div class="review_comment">
+                                <span class="review">조회수 <%- brdData[i].user_review %></span>
+                            </div>
+                        </div>
+                        <div class="right">
+                            <img src="/upload/<%- brdData[i].user_file %>" alt="">
+                        </div>
+                    </div>
+                    <% } %>
+                </div>
+                <div class="btn_wrap">
+                    <a class="write_btn" href="/insert">글쓰기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include("common/footer.ejs"); %>
+</body>
+</html>

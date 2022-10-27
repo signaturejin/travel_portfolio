@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>상세페이지</title>
+    <%- include("common/font_icon.ejs"); %>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include("common/header.ejs"); %>
+    <div id="container">
+        <%- include("common/banner.ejs"); %>
+        <div class="detail_page">
+            <div class="center">
+                <div class="detail_wrap">
+                    <div class="title_box">
+                        <div class="user_title"><%- brdData.user_title %></div>
+                        <div class="user_name"><%- brdData.user_name %></div>
+                    </div>
+                    <div class="bar"></div>
+                    <div class="context">
+                        <div class="user_img"><img src="/upload/<%- brdData.user_file %>" alt=""></div>
+                        <div class="user_context"><%- brdData.user_context %></div>
+                    </div>
+                    <div class="detail_bot">
+                        <div class="brd_info">
+                            <div class="brd_no"><span>게시글 </span><%- brdData.brd_no %></div>
+                            <div class="user_date"><span>작성날짜 </span><%- brdData.insert_date %></div>
+                            <div class="user_review"><span>조회수 </span><%- brdData.user_review %></div>
+                        </div>
+                        <div class="detail_btns">
+                            <% if(userData.member_id == brdData.user_id){ %>
+                            <!-- 삭제 수정 버튼 -->
+                            <a class="del_btn" href="/delete/<%- brdData.brd_no %>">삭제</a>
+                            <a class="upt_btn" href="/update/<%- brdData.brd_no %>">수정</a>
+                            <% } %>
+                            <a class="list_btn" href="/list">목록</a>
+                        </div>
+                    </div>
+                    <!-- 댓글 출력 -->
+                    <div class="com_wrap">
+                        <p>댓글 <i class="fa-solid fa-comment-dots"></i></p>
+                        <% for(let i=0; i<comData.length; i++){%>
+                        <div class="com_view">
+                            <div class="com_user"><%- comData[i].com_name %></div>
+                            <div class="com_context"><%- comData[i].com_context %></div>
+                            <div class="com_date"><%- comData[i].com_date %></div>
+                        </div>
+                        <% } %>
+                        <!-- 댓글 작성 -->
+                        <div class="com_insert">
+                            <form id="com_form" action="/comment" method="post">
+                                <!-- 게시글번호를 알기 위한 히든태그 -->
+                                <input type="hidden" name="prd_no" value="<%- brdData.brd_no %>">
+                                <textarea class="comment" name="comment" placeholder="댓글을 입력하세요..!"></textarea>
+                                <div class="btn_wrap">
+                                    <button id="com_btn" type="submit">입력</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <%- include("common/footer.ejs"); %>
+    <script>
+        const del_btn = document.querySelector(".del_btn");
+
+        del_btn.addEventListener("click",function(e){
+
+            let check = confirm("삭제하면 복구할 수 없습니다.\n정말로 삭제하시겠습니까?");
+
+            if(!check){
+                e.preventDefault();
+            }
+        });
+    </script>
+</body>
+</html>

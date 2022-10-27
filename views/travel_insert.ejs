@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>작성페이지</title>
+    <%- include("common/font_icon.ejs"); %>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include("common/header.ejs"); %>
+    <div id="container">
+        <div class="insert_wrap">
+            <div class="center">
+                <form id="insert_form" action="/insertAdd" method="post" enctype="multipart/form-data">
+                    <!-- 로그인한 유저데이터 저장시키기 위한 히든태그 -->
+                    <input type="hidden" class="user_brd_id" name="user_brd_id" value="<%- userData.member_id %>">
+                    <div class="insert_top">
+                        <div class="title_box">
+                            <div class="title_text">제목</div>
+                            <input type="text" class="title" name="title" placeholder="title">
+                        </div>
+                        <div class="name_box">
+                            <div class="name_text">작성자</div>
+                            <p class="name"><%- userData.member_name %></p>
+                        </div>
+                    </div>
+                    <input type="file" class="file" name="file" placeholder="thumbnail">
+                    <textarea class="context" name="context"></textarea>
+                    <button type="submit">작성하기</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <%- include("common/footer.ejs"); %>
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수정페이지</title>
+    <%- include("common/font_icon.ejs"); %>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <%- include("common/header.ejs"); %>
+    <div id="container">
+        <div class="center">
+            <form id="update_form" action="/updateAdd" method="post" enctype="multipart/form-data">
+                <!-- 로그인한 유저데이터 저장시키기 위한 히든태그 -->
+                <input type="hidden" class="user_brd_id" name="user_brd_id" value="<%- userData.member_id %>">
+                <!-- 게시글 번호를 알기위한 히든태그 -->
+                <input type="hidden" class="brd_no" name="brd_no" value="<%- brdData.brd_no %>">
+                <p class="name"><%- userData.member_name %></p>
+                <input type="text" class="title" name="title" placeholder="title" value="<%- brdData.user_title %>">
+                <input type="file" class="file" name="file" placeholder="thumbnail" value="<%- brdData.user_file %>">
+                <textarea class="context" name="context"><%- brdData.user_context %></textarea>
+                <button type="submit">수정하기</button>
+            </form>
+        </div>
+    </div>
+    <%- include("common/footer.ejs"); %>
+</body>
+</html>

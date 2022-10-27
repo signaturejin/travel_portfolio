@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입 페이지</title>
+    <%- include("common/font_icon.ejs"); %>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div id="join">
+        <div class="center">
+            <div class="join_wrap">
+                <div class="logo_wrap">
+                    <a href="/"><img src="/img/logo2.png" alt=""></a>
+                </div>
+                <p class="text">회원가입</p>
+                <form id="join_form" action="/joinAdd" method="post">
+                    <div class="input_wrap">
+                        <label for="id">아이디</label>
+                        <input type="text" class="id input" name="id">
+                        <div class="msg_box"></div>
+                    </div>
+                    <div class="input_wrap">
+                        <label for="pass">비밀번호</label>
+                        <input type="password" class="pass input" name="pass">
+                        <div class="msg_box"></div>
+                    </div>
+                    <div class="input_wrap">
+                        <label for="re_pass">비밀번호 재확인</label>
+                        <input type="password" class="repass">
+                        <div class="re_msg_box"></div>
+                    </div>
+                    <div class="input_wrap">
+                        <label for="name">이름</label>
+                        <input type="text" class="name input" name="name">
+                        <div class="msg_box"></div>
+                    </div>
+                    <div class="input_wrap">
+                        <label for="email">이메일</label>
+                        <input type="text" class="email input" name="email" placeholder="email@naver.com">
+                        <div class="msg_box"></div>
+                    </div>
+                    <div class="input_wrap">
+                        <label for="phone">전화번호</label>
+                        <input type="text" class="phone input" name="phone" placeholder="010-0000-0000">
+                        <div class="msg_box"></div>
+                    </div>
+                    <button id="join_btn" type="submit">가입하기</button>
+                </form>
+                <p class="go_login">
+                    이미 계정이 있습니까? <a href="/login">로그인하기</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <script>
+        const inputTag = document.querySelectorAll(".input_wrap .input");
+        const repassTag = document.querySelector(".input_wrap .repass");
+        const msg = document.querySelectorAll(".input_wrap .msg_box");
+        const reMsg = document.querySelector(".input_wrap .re_msg_box");
+        const joinBtn = document.querySelector("#join_btn");
+
+        console.log(joinBtn);
+
+        let dataList = [
+            {
+                //아이디
+                validation: /^(?=.*[a-zA-z])(?=.*[0-9]).{5,10}$/,
+                okmsg: "ok!",
+                nomsg: "영어 대소문자 및 숫자 0~9를 혼합하여 작성해주세요. 글자수 5~10까지 입력가능합니다.",
+                check: false
+            },
+            {
+                //비밀번호
+                validation: /^(?=.*[a-zA-z])(?=.*[!$_])(?=.*[0-9]).{5,15}$/,
+                okmsg: "ok!",
+                nomsg: "영어 대소문자 및 특수문자 !,$,_, 숫자 0~9를 혼합하여 작성해주세요.\n글자수 5~15까지 입력가능합니다.",
+                check: false
+            },
+            {
+                //이름
+                validation: /^[ㄱ-힣]{2,4}$/,
+                okmsg: "ok!",
+                nomsg: "올바르게 작성했는지 다시 확인해주세요.",
+                check: false
+            },
+            {
+                //이메일
+                validation: /^[\w\!\@\$]+\@+[a-z]+\.+[a-z]{2,3}$/,
+                okmsg: "ok!",
+                nomsg: "이메일 형식에 맞게 작성하였는지 다시 확인해주세요.",
+                check: false
+            },
+            {
+                //전화번호
+                validation: /^(010)\-\d{3,4}\-\d{3,4}$/,
+                okmsg: "ok!",
+                nomsg: "010-0000-0000 형식으로 입력해주세요.",
+                check: false
+            }
+        ];
+
+        //인풋태그에 키보드를 누를때마다 형식에 맞는 값인지 확인
+        inputTag.forEach(function(item,index){
+            item.addEventListener("keyup",function(){
+
+                let inputValue = item.value;
+                let inputCheck = dataList[index].validation.test(inputValue);
+    
+                if(inputCheck){
+                    item.style.border = "2px solid green";
+                    msg[index].innerHTML = dataList[index].okmsg;
+                    msg[index].style.color = "green";
+                    dataList[index].check = true;
+                }
+                else {
+                    item.style.border = "2px solid red";
+                    msg[index].innerHTML = dataList[index].nomsg;
+                    msg[index].style.color = "red";
+                    dataList[index].check = false;
+                }
+            });
+        });
+
+        //비밀번호값과 비밀번호 재확인값이 같은지 확인
+        repassTag.addEventListener("focus",function(){
+            repassTag.addEventListener("keyup",function(){
+
+                //비밀번호재확인을 위한 변수
+                let repassCheck = false;
+
+                let repassValue = repassTag.value;
+                let passvalue = inputTag[1].value;
+
+                if(repassValue == passvalue){
+                    repassTag.style.border = "2px solid green";
+                    reMsg.innerHTML = "위 비밀번호와 일치합니다.";
+                    reMsg.style.color = "green";
+                    repassCheck = true;
+                }
+                else {
+                    repassTag.style.border = "2px solid red";
+                    reMsg.innerHTML = "위 비밀번호와 일치하지않습니다.";
+                    reMsg.style.color = "red";
+                    repassCheck = false;
+                }
+            });
+        });
+
+        joinBtn.addEventListener("click",function(e){
+            
+            let finalCheck = dataList.every(element => element.check == true);
+
+            if(finalCheck){
+                if(repassCheck){
+                    
+                }
+                else {
+                    e.preventDefault();
+                    alert("형식에 맞게 작성해주세요.");
+                }
+            }
+            else {
+                e.preventDefault();
+                alert("형식에 맞게 작성해주세요.");
+            }
+        });
+        
+    </script>
+</body>
+</html>
