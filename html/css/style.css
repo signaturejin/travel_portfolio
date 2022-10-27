@@ -167,7 +167,7 @@ body {
   width: 57%;
   display: flex;
   align-items: center;
-  z-index: 99;
+  z-index: 98;
 }
 #container .banner.list .center .text_box {
   color: #fff;
