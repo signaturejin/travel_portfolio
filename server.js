@@ -44,8 +44,12 @@ MongoClient.connect("mongodb+srv://admin:qwer1234@testdb.qmmqvc3.mongodb.net/?re
 
 //메인페이지 경로 요청
 app.get("/",function(req,res){
-    console.log(req.user);
     res.render("index", {userData:req.user});
+});
+
+//호텔(서브페이지) 경로 요청
+app.get("/hotel",function(req,res){
+    res.render("travel_hotel", {userData:req.user});
 });
 
 //파일첨부 어디에 저장할 것인지에 대한 기능

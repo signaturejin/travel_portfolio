@@ -43,9 +43,13 @@
     }
     .h_bot {
         .logo {
-            width: 160px; height: 30px;
+            width: 160px; height: 65px;
             a {
-                img {width: 100%; height: 100%;}
+                img {width: 40%; height: 100%;}
+                span {
+                    font-size: 25px; color: #000000;
+                    margin-left: -3px;
+                }
             }
         }
         .gnb {
@@ -299,14 +303,19 @@
             }
         }
     }
-    //작성페이지
-    .insert_wrap {
+    //작성페이지 및 수정페이지
+    .insert_wrap,.update_wrap {
         display: flex; justify-content: center;
         .center {
             width: 57%; background-color: #ff8119;
-            #insert_form {
-                .insert_top {
+            > h3 {
+                font-size: 30px; text-align: center;
+                margin: 55px 0 50px;
+            }
+            #insert_form,#update_form {
+                .insert_top,.update_top {
                     display: flex; justify-content: space-between;
+                    // background-color: pink;
                     > div {
                         display: flex; padding: 10px 0;
                         box-sizing: border-box;
@@ -314,9 +323,11 @@
                         > div {text-align: center;}
                     }
                     .title_box {
-                        // background-color: pink;
                         width: 80%;
-                        .title_text {width: 10%;}
+                        .title_text {
+                            font-size: 20px; text-align: center;
+                            margin: 0 20px;
+                        }
                         input {
                             height: 40px; width: 70%;
                             padding-left: 12px;
@@ -325,25 +336,93 @@
                         }
                     }
                     .name_box {
-                        // background-color: skyblue;
-                        // width: 40%;
-                        // .name_text {width: 15%;}
+                        width: 20%;
+                        .name_text {
+                            width: 28%;
+                            font-size: 15px;
+                        }
                         .name {
-                            margin-left: 10px;
+                            width: 60%;
                             background-color: #949494;
                             color: #353535;
                             padding: 10px 12px ;
                             border-radius: 5px;
                             border: 1px solid #585858;
+                            margin-right: 20px;
+                            box-sizing: border-box;
                         }
                     }
                 }
                 .file_wrap {
-                    display: flex;
+                    display: flex; align-items: center;
+                    // background-color: blanchedalmond;
+                    line-height: 35px; padding: 0 20px;
+                    .file_text {margin-right: 12px;}
+                    // .file {background-color: orange;}
                 }
-                .context {
-                    padding: 12px; border: 1px solid #000;
-                    border-radius: 5px;
+                .bar {
+                    width: 100%; height: 2px; background-color: red;
+                    border-radius: 10px; margin: 10px 0 20px;
+                }
+                .context_wrap {
+                    padding: 0 20px;
+                    .context {
+                        padding: 12px; border: 1px solid #000; height: 550px;
+                        border-radius: 5px; width: 100%; box-sizing: border-box;
+                        font-size: 16px;
+                    }
+                }
+                .btn_wrap {
+                    display: flex; justify-content: flex-end;
+                    padding: 20px 20px;
+                    #sub_btn,#upt_btn {
+                        width: 100px; height: 35px;
+                        border-radius: 5px; border: none;
+                        background-color: #27aa78; color: #ffffff;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+    // 호텔(서브페이지)
+    .where {
+        display: flex; justify-content: center;
+        .center {
+            width: 57%; background-color: #dbdbdb;
+            .title {
+                text-align: center; margin: 30px 0;
+            }
+            .popular_local {
+                .subtitle {
+                    text-align: center;
+                }
+                .local_list_wrap {
+                    background-color: pink;
+                    width: 100%;
+                    display: flex; justify-content: space-between;
+                    align-items: center;
+                    margin: 15px 0 20px;
+                    .local_list {
+                        width: 24%; margin: 0 1%; height: 200px;
+                        overflow: hidden; position: relative;
+                        border-radius: 10px;
+                        .local_bg {
+                            width: 100%; height: 100%;
+                            transition: all 0.5s;
+                            &:hover {
+                                transform: scale(1.3);
+                            }
+                        }
+                        .text_box {
+                            position: absolute; left: 10px; top: 10px;
+                            background-color: rgba(0,0,0,0.7);
+                            color: #fff;
+                            border-radius: 10px; padding: 7px;
+                            font-size: 15px;
+                        }
+
+                    }
                 }
             }
         }
@@ -482,7 +561,10 @@
             display: flex; align-items: center;
             .left {
                 width: 10%; margin-right: 40px;
-                img {width: 100%; height: 100%;}
+                .f_logo {
+                    width: 100%; height: 100%;
+                    border-radius: 50%;
+                }
             }
             .right {
                 font-size: 12px;
