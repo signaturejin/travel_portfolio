@@ -155,6 +155,7 @@ body {
   width: 400%;
   height: 855px;
   display: flex;
+  transition: all 0.5s;
 }
 #container .slide .view .slide_box {
   width: 25%;
@@ -217,6 +218,7 @@ body {
   padding: 20px 10px;
   border-radius: 10px;
   background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
 }
 #container .slide .prev_next .prev {
   left: 20px;
@@ -237,6 +239,7 @@ body {
   background-color: rgba(255, 255, 255, 0.4);
   margin: 0 12px;
   border-radius: 10px;
+  cursor: pointer;
 }
 #container .slide .circle_btn .circle.on {
   background-color: #fff;
@@ -940,10 +943,10 @@ body {
   text-align: center;
   margin: 30px 0;
 }
-#container .where .center .popular_local .subtitle, #container .where .center .theme_hotel .subtitle {
+#container .where .center .sub_popular_local .subtitle, #container .where .center .theme_hotel .subtitle {
   text-align: center;
 }
-#container .where .center .popular_local .local_list_wrap, #container .where .center .popular_local .theme_list_wrap, #container .where .center .theme_hotel .local_list_wrap, #container .where .center .theme_hotel .theme_list_wrap {
+#container .where .center .sub_popular_local .local_list_wrap, #container .where .center .sub_popular_local .theme_list_wrap, #container .where .center .theme_hotel .local_list_wrap, #container .where .center .theme_hotel .theme_list_wrap {
   background-color: pink;
   width: 100%;
   display: flex;
@@ -951,25 +954,25 @@ body {
   align-items: center;
   margin: 15px 0 20px;
 }
-#container .where .center .popular_local .local_list_wrap > a, #container .where .center .popular_local .theme_list_wrap > a, #container .where .center .theme_hotel .local_list_wrap > a, #container .where .center .theme_hotel .theme_list_wrap > a {
+#container .where .center .sub_popular_local .local_list_wrap > a, #container .where .center .sub_popular_local .theme_list_wrap > a, #container .where .center .theme_hotel .local_list_wrap > a, #container .where .center .theme_hotel .theme_list_wrap > a {
   width: 24%;
 }
-#container .where .center .popular_local .local_list_wrap > a .local_list, #container .where .center .popular_local .local_list_wrap > a .theme_list, #container .where .center .popular_local .theme_list_wrap > a .local_list, #container .where .center .popular_local .theme_list_wrap > a .theme_list, #container .where .center .theme_hotel .local_list_wrap > a .local_list, #container .where .center .theme_hotel .local_list_wrap > a .theme_list, #container .where .center .theme_hotel .theme_list_wrap > a .local_list, #container .where .center .theme_hotel .theme_list_wrap > a .theme_list {
+#container .where .center .sub_popular_local .local_list_wrap > a .local_list, #container .where .center .sub_popular_local .local_list_wrap > a .theme_list, #container .where .center .sub_popular_local .theme_list_wrap > a .local_list, #container .where .center .sub_popular_local .theme_list_wrap > a .theme_list, #container .where .center .theme_hotel .local_list_wrap > a .local_list, #container .where .center .theme_hotel .local_list_wrap > a .theme_list, #container .where .center .theme_hotel .theme_list_wrap > a .local_list, #container .where .center .theme_hotel .theme_list_wrap > a .theme_list {
   margin: 0 1%;
   height: 200px;
   overflow: hidden;
   position: relative;
   border-radius: 10px;
 }
-#container .where .center .popular_local .local_list_wrap > a .local_list .local_bg, #container .where .center .popular_local .local_list_wrap > a .local_list .theme_bg, #container .where .center .popular_local .local_list_wrap > a .theme_list .local_bg, #container .where .center .popular_local .local_list_wrap > a .theme_list .theme_bg, #container .where .center .popular_local .theme_list_wrap > a .local_list .local_bg, #container .where .center .popular_local .theme_list_wrap > a .local_list .theme_bg, #container .where .center .popular_local .theme_list_wrap > a .theme_list .local_bg, #container .where .center .popular_local .theme_list_wrap > a .theme_list .theme_bg, #container .where .center .theme_hotel .local_list_wrap > a .local_list .local_bg, #container .where .center .theme_hotel .local_list_wrap > a .local_list .theme_bg, #container .where .center .theme_hotel .local_list_wrap > a .theme_list .local_bg, #container .where .center .theme_hotel .local_list_wrap > a .theme_list .theme_bg, #container .where .center .theme_hotel .theme_list_wrap > a .local_list .local_bg, #container .where .center .theme_hotel .theme_list_wrap > a .local_list .theme_bg, #container .where .center .theme_hotel .theme_list_wrap > a .theme_list .local_bg, #container .where .center .theme_hotel .theme_list_wrap > a .theme_list .theme_bg {
+#container .where .center .sub_popular_local .local_list_wrap > a .local_list .local_bg, #container .where .center .sub_popular_local .local_list_wrap > a .local_list .theme_bg, #container .where .center .sub_popular_local .local_list_wrap > a .theme_list .local_bg, #container .where .center .sub_popular_local .local_list_wrap > a .theme_list .theme_bg, #container .where .center .sub_popular_local .theme_list_wrap > a .local_list .local_bg, #container .where .center .sub_popular_local .theme_list_wrap > a .local_list .theme_bg, #container .where .center .sub_popular_local .theme_list_wrap > a .theme_list .local_bg, #container .where .center .sub_popular_local .theme_list_wrap > a .theme_list .theme_bg, #container .where .center .theme_hotel .local_list_wrap > a .local_list .local_bg, #container .where .center .theme_hotel .local_list_wrap > a .local_list .theme_bg, #container .where .center .theme_hotel .local_list_wrap > a .theme_list .local_bg, #container .where .center .theme_hotel .local_list_wrap > a .theme_list .theme_bg, #container .where .center .theme_hotel .theme_list_wrap > a .local_list .local_bg, #container .where .center .theme_hotel .theme_list_wrap > a .local_list .theme_bg, #container .where .center .theme_hotel .theme_list_wrap > a .theme_list .local_bg, #container .where .center .theme_hotel .theme_list_wrap > a .theme_list .theme_bg {
   width: 100%;
   height: 100%;
   transition: all 0.5s;
 }
-#container .where .center .popular_local .local_list_wrap > a .local_list .local_bg:hover, #container .where .center .popular_local .local_list_wrap > a .local_list .theme_bg:hover, #container .where .center .popular_local .local_list_wrap > a .theme_list .local_bg:hover, #container .where .center .popular_local .local_list_wrap > a .theme_list .theme_bg:hover, #container .where .center .popular_local .theme_list_wrap > a .local_list .local_bg:hover, #container .where .center .popular_local .theme_list_wrap > a .local_list .theme_bg:hover, #container .where .center .popular_local .theme_list_wrap > a .theme_list .local_bg:hover, #container .where .center .popular_local .theme_list_wrap > a .theme_list .theme_bg:hover, #container .where .center .theme_hotel .local_list_wrap > a .local_list .local_bg:hover, #container .where .center .theme_hotel .local_list_wrap > a .local_list .theme_bg:hover, #container .where .center .theme_hotel .local_list_wrap > a .theme_list .local_bg:hover, #container .where .center .theme_hotel .local_list_wrap > a .theme_list .theme_bg:hover, #container .where .center .theme_hotel .theme_list_wrap > a .local_list .local_bg:hover, #container .where .center .theme_hotel .theme_list_wrap > a .local_list .theme_bg:hover, #container .where .center .theme_hotel .theme_list_wrap > a .theme_list .local_bg:hover, #container .where .center .theme_hotel .theme_list_wrap > a .theme_list .theme_bg:hover {
+#container .where .center .sub_popular_local .local_list_wrap > a .local_list .local_bg:hover, #container .where .center .sub_popular_local .local_list_wrap > a .local_list .theme_bg:hover, #container .where .center .sub_popular_local .local_list_wrap > a .theme_list .local_bg:hover, #container .where .center .sub_popular_local .local_list_wrap > a .theme_list .theme_bg:hover, #container .where .center .sub_popular_local .theme_list_wrap > a .local_list .local_bg:hover, #container .where .center .sub_popular_local .theme_list_wrap > a .local_list .theme_bg:hover, #container .where .center .sub_popular_local .theme_list_wrap > a .theme_list .local_bg:hover, #container .where .center .sub_popular_local .theme_list_wrap > a .theme_list .theme_bg:hover, #container .where .center .theme_hotel .local_list_wrap > a .local_list .local_bg:hover, #container .where .center .theme_hotel .local_list_wrap > a .local_list .theme_bg:hover, #container .where .center .theme_hotel .local_list_wrap > a .theme_list .local_bg:hover, #container .where .center .theme_hotel .local_list_wrap > a .theme_list .theme_bg:hover, #container .where .center .theme_hotel .theme_list_wrap > a .local_list .local_bg:hover, #container .where .center .theme_hotel .theme_list_wrap > a .local_list .theme_bg:hover, #container .where .center .theme_hotel .theme_list_wrap > a .theme_list .local_bg:hover, #container .where .center .theme_hotel .theme_list_wrap > a .theme_list .theme_bg:hover {
   transform: scale(1.3);
 }
-#container .where .center .popular_local .local_list_wrap > a .local_list .text_box, #container .where .center .popular_local .local_list_wrap > a .theme_list .text_box, #container .where .center .popular_local .theme_list_wrap > a .local_list .text_box, #container .where .center .popular_local .theme_list_wrap > a .theme_list .text_box, #container .where .center .theme_hotel .local_list_wrap > a .local_list .text_box, #container .where .center .theme_hotel .local_list_wrap > a .theme_list .text_box, #container .where .center .theme_hotel .theme_list_wrap > a .local_list .text_box, #container .where .center .theme_hotel .theme_list_wrap > a .theme_list .text_box {
+#container .where .center .sub_popular_local .local_list_wrap > a .local_list .text_box, #container .where .center .sub_popular_local .local_list_wrap > a .theme_list .text_box, #container .where .center .sub_popular_local .theme_list_wrap > a .local_list .text_box, #container .where .center .sub_popular_local .theme_list_wrap > a .theme_list .text_box, #container .where .center .theme_hotel .local_list_wrap > a .local_list .text_box, #container .where .center .theme_hotel .local_list_wrap > a .theme_list .text_box, #container .where .center .theme_hotel .theme_list_wrap > a .local_list .text_box, #container .where .center .theme_hotel .theme_list_wrap > a .theme_list .text_box {
   position: absolute;
   left: 10px;
   top: 10px;
@@ -979,7 +982,7 @@ body {
   padding: 7px;
   font-size: 15px;
 }
-#container .where .center .popular_local .local_list_wrap > a .local_list .text_box .hash_tag, #container .where .center .popular_local .local_list_wrap > a .theme_list .text_box .hash_tag, #container .where .center .popular_local .theme_list_wrap > a .local_list .text_box .hash_tag, #container .where .center .popular_local .theme_list_wrap > a .theme_list .text_box .hash_tag, #container .where .center .theme_hotel .local_list_wrap > a .local_list .text_box .hash_tag, #container .where .center .theme_hotel .local_list_wrap > a .theme_list .text_box .hash_tag, #container .where .center .theme_hotel .theme_list_wrap > a .local_list .text_box .hash_tag, #container .where .center .theme_hotel .theme_list_wrap > a .theme_list .text_box .hash_tag {
+#container .where .center .sub_popular_local .local_list_wrap > a .local_list .text_box .hash_tag, #container .where .center .sub_popular_local .local_list_wrap > a .theme_list .text_box .hash_tag, #container .where .center .sub_popular_local .theme_list_wrap > a .local_list .text_box .hash_tag, #container .where .center .sub_popular_local .theme_list_wrap > a .theme_list .text_box .hash_tag, #container .where .center .theme_hotel .local_list_wrap > a .local_list .text_box .hash_tag, #container .where .center .theme_hotel .local_list_wrap > a .theme_list .text_box .hash_tag, #container .where .center .theme_hotel .theme_list_wrap > a .local_list .text_box .hash_tag, #container .where .center .theme_hotel .theme_list_wrap > a .theme_list .text_box .hash_tag {
   margin-right: 2px;
 }
 #container .where .center .btn_wrap {

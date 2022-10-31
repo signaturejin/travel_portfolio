@@ -102,6 +102,7 @@
             width: 400%;
             height: 855px;
             display: flex;
+            transition: all 0.5s;
             .slide_box {
                 width: 25%;
                 height: 100%;
@@ -131,7 +132,6 @@
                         margin-bottom: 40px;
                     }
                     .slide_btn {
-                        
                         a {
                             color: #fff; background-color: skyblue;
                             padding: 8px 20px; border-radius: 10px;
@@ -148,6 +148,7 @@
                 color: #fff; padding: 20px 10px;
                 border-radius: 10px;
                 background-color: rgba(0,0,0,0.4);
+                cursor: pointer;
             }
             .prev {left: 20px;}
             .next {right: 20px;}
@@ -162,6 +163,7 @@
                 background-color: rgba(255,255,255,0.4);
                 margin: 0 12px;
                 border-radius: 10px;
+                cursor: pointer;
             }
             .circle.on {
                 background-color: #fff;
@@ -707,7 +709,7 @@
             .title {
                 text-align: center; margin: 30px 0;
             }
-            .popular_local,.theme_hotel {
+            .sub_popular_local,.theme_hotel {
                 .subtitle {
                     text-align: center;
                 }
@@ -765,7 +767,6 @@
                 text-align: center; margin: 10px 0;
             }
             .silde_wrap {
-
                 .silde_view {
                     width: 100%;
                     display: flex;
