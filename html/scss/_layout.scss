@@ -43,9 +43,9 @@
     }
     .h_bot {
         .logo {
-            width: 160px; height: 65px;
+            width: 160px; height: 43px;
             a {
-                img {width: 40%; height: 100%;}
+                img {width: 100%; height: 100%;}
                 span {
                     font-size: 25px; color: #000000;
                     margin-left: -3px;
@@ -92,6 +92,319 @@
 
 //중간영역
 #container {
+    //메인페이지
+    //메인페이지 slide 영역 
+    .slide {
+        width: 100%;
+        overflow: hidden;
+        position: relative;
+        .view {
+            width: 400%;
+            height: 855px;
+            display: flex;
+            .slide_box {
+                width: 25%;
+                height: 100%;
+                background-repeat: no-repeat;
+                background-size: cover;
+                position: relative; left: 0; top: 0;
+                &:nth-child(1) {background-image: url(/img/slide01.jpg);}
+                &:nth-child(2) {background-image: url(/img/slide02.jpg);}
+                &:nth-child(3) {background-image: url(/img/slide03.jpg);}
+                &:nth-child(4) {background-image: url(/img/slide04.jpg);}
+                .bg {
+                    position: absolute; left: 0; top: 0;
+                    width: 100%; height: 100%;
+                    background-color: rgba(0,0,0,0.1);
+                }
+                .text_box {
+                    position: absolute; left: 50%; top: 50%;
+                    transform: translate(-50%,-50%);
+                    color: #fff; text-align: center;
+                    .slide_title {
+                        font-size: 50px;
+                        margin-bottom: 38px;
+                    }
+                    .sub_text {
+                        font-size: 25px;
+                        line-height: 30px;
+                        margin-bottom: 40px;
+                    }
+                    .slide_btn {
+                        
+                        a {
+                            color: #fff; background-color: skyblue;
+                            padding: 8px 20px; border-radius: 10px;
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+        }
+        .prev_next {
+            > div {
+                position: absolute;
+                top: 50%; transform: translateY(-50%);
+                color: #fff; padding: 20px 10px;
+                border-radius: 10px;
+                background-color: rgba(0,0,0,0.4);
+            }
+            .prev {left: 20px;}
+            .next {right: 20px;}
+        }
+        .circle_btn {
+            position: absolute;
+            left: 50%; bottom: 40px;
+            transform: translateX(-50%);
+            display: flex;
+            .circle {
+                width: 50px; height: 10px;
+                background-color: rgba(255,255,255,0.4);
+                margin: 0 12px;
+                border-radius: 10px;
+            }
+            .circle.on {
+                background-color: #fff;
+            }
+        }
+    }
+    //메인페이지 popular_local 영역
+    .popular_local {
+        display: flex; justify-content: center;
+        padding-top: 120px;
+        .center {
+            width: 57%;
+            .title_box {
+                .title {text-align: center; margin-bottom: 25px; font-size: 30px;}
+                .sub_title {text-align: center; margin-bottom: 80px; font-size: 15px;}
+            }
+            .local_wrap {
+                display: flex; justify-content: space-between;
+                flex-wrap: wrap;
+                .local_box {
+                    width: 32%; height: 250px;
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    position: relative;
+                    overflow: hidden;
+                    border-radius: 10px;
+                    &:hover {
+                        .hover_box {bottom: 0;}
+                    }
+                    &:nth-child(1) {background-image: url(/img/popular.jpg);}
+                    &:nth-child(2) {background-image: url(/img/popular.jpg);}
+                    &:nth-child(3) {background-image: url(/img/popular.jpg);}
+                    &:nth-child(4) {
+                        background-image: url(/img/popular.jpg);
+                        width: 66%;}
+                    &:nth-child(5) {background-image: url(/img/popular.jpg);}
+                    .text_box {
+                        box-sizing: border-box;
+                        color: #fff;
+                        margin: 207px 0 0 10px;
+                    }
+                    .hover_box {
+                        background-color: rgba(0,0,0,0.7);
+                        width: 100%; height: 100%;
+                        position: absolute; left: 0; bottom: -100%;
+                        transition: all 0.5s; text-align: center;
+                        color: #fff;
+                    }
+                }
+                .mg {margin-bottom: 2%;}
+            }
+        }
+    }
+    //메인페이지 local_video 영역
+    .local_video {
+        display: flex; justify-content: center;
+        padding: 100px 0; margin: 180px 0;
+        background-color: #eeeeee;
+        .center {
+            width: 100%;
+            .title_box {
+                .title {text-align: center; margin-bottom: 25px; font-size: 30px;}
+                .sub_title {text-align: center; margin-bottom: 80px; font-size: 15px;}
+            }
+            .context_wrap {
+                display: flex; align-items: center;
+                > div {width: 50%; margin: 0 30px;}
+                .left {
+                    height: 500px;
+                    video {width: 100%; height: 100%;}
+                }
+                .right {
+                    height: 500px;
+                    .box_list {
+                        height: 23%;
+                        background-color: pink;
+                        margin-bottom: 1.5%;
+                        border-radius: 5px;
+                        padding: 25px 30px;
+                        box-sizing: border-box;
+                        display: flex;
+                        align-items: center;
+                        box-shadow: 1px 3px 5px rgba(0,0,0,0.2);
+                        &:last-child {margin-bottom: 0;}
+                        .icon {
+                            font-size: 55px; margin-right: 35px;
+                        }
+                        .text_box {
+                            .text1 {
+                                font-size: 20px; margin-bottom: 8px;
+                                font-weight: 600;
+                            }
+                            .text2 {font-size: 15px; line-height: 21px;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //메인페이지 tour_bus 영역
+    .tour_bus {
+        display: flex; justify-content: center;
+        padding-bottom: 300px;
+        .center {
+            width: 70%;
+            .title_box {
+                .title {text-align: center; margin-bottom: 25px; font-size: 30px;}
+                .sub_title {text-align: center; margin-bottom: 80px; font-size: 15px;}
+            }
+            .bus_wrap {
+                display: flex; justify-content: space-between;
+                .bus_box {
+                    width: 22%;
+                    background-color: palegreen;
+                    border-radius: 10px;
+                    overflow: hidden;
+                    box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+                    // animation: jump duration timing-function delay iteration-count;
+                    // @keyframes jump {
+                        
+                    // }
+                    position: relative;
+                    transition: all 0.5s;
+                    &:hover {bottom: 20px;}
+                    .tour_img {
+                        img {width: 100%;}
+                    }
+                    .tour_info {
+                        padding: 10px;
+                        .tour_title {
+                            margin-top: 2px; font-size: 18px;
+                            font-weight: 600;
+                        }
+                        .hash_tag {
+                            margin-top: 7px; font-size: 15px;
+                            span {margin-right: 5px;}
+                        }
+                        .price {
+                            margin: 10px 0 5px;
+                            span {font-size: 22px; font-weight: 600;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+    //메인페이지 local_count 영역
+    .local_count {
+        width: 100%; height: 270px;
+        display: flex; justify-content: center;
+        align-items: center;
+        background-image: url(/img/popular.jpg);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        margin-bottom: 300px;
+        .center {
+            width: 57%;
+            .count_wrap {
+                display: flex; justify-content: space-between;
+                .count_box {
+                    width: 18%; margin: 0 2%;
+                    text-align: center;
+                    background-color: #dbdbdb;
+                    border-radius: 10px;
+                    padding: 15px 0;
+                    .icon {font-size: 35px; margin-bottom: 10px;}
+                    .local_name {font-size: 18px; margin-bottom: 5px;}
+                    .count_number {font-size: 20px;}
+                }
+            }
+        }
+    }
+    //메인페이지 package 영역
+    .package {
+        display: flex; justify-content: center;
+        margin-bottom: 300px;
+        .center {
+            width: 57%;
+            .title_box {
+                .title {text-align: center; margin-bottom: 25px; font-size: 30px;}
+                .sub_title {text-align: center; margin-bottom: 80px; font-size: 15px;}
+            }
+            .package_wrap {
+                width: 100%; height: 400px;
+                display: flex; position: relative;
+                .left {
+                    width: 40%; height: 100%;
+                    background-image: url("/img/popular.jpg");
+                    background-repeat: no-repeat;
+                    background-size: cover;
+                    padding: 87px 0 0 20px;
+                    .big_text {
+                        font-size: 30px; line-height: 35px;
+                        margin-bottom: 50px;
+                    }
+                    .package_menu {
+                        li {
+                            width: 53%;
+                            background-color: palegreen;
+                            border-radius: 10px;
+                            margin-bottom: 10px;
+                            line-height: 45px;
+                            padding-left: 12px;
+                            a {
+                                display: block; width: 100%; height: 100%;
+                                color: #000;
+                            }
+                        }
+                    }
+                }
+                .right {
+                    width: 100%; position: absolute; left: 343px; top: 25%;
+                    .local {
+                        display: flex;
+                        .box {
+                            margin-right: 20px;
+                            border: 1px solid #000;
+                            border-radius: 10px;
+                            overflow: hidden;
+                            background-color: #dbdbdb;
+                            img {width: 100%;}
+                            .package_info {
+                                padding: 10px;
+                                .tour_title {
+                                    margin-top: 2px; font-size: 18px;
+                                    font-weight: 600;
+                                }
+                                .hash_tag {
+                                    margin-top: 7px; font-size: 15px;
+                                    span {margin-right: 5px;}
+                                }
+                                .price {
+                                    margin: 10px 0 5px;
+                                    span {font-size: 22px; font-weight: 600;}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
     // 배너
     .banner {
         background-color: orchid;
