@@ -44,7 +44,9 @@ MongoClient.connect("mongodb+srv://admin:qwer1234@testdb.qmmqvc3.mongodb.net/?re
 
 //메인페이지 경로 요청
 app.get("/",function(req,res){
-    res.render("index", {userData:req.user});
+    db.collection("popular_local").find({}).toArray(function(err,result){
+        res.render("index", {userData:req.user,popular_list:result});
+    });
 });
 
 //호텔(서브페이지) 경로 요청

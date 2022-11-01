@@ -11,6 +11,7 @@
 <body>
     <%- include("common/header.ejs"); %>
     <div id="container">
+        <!-- slide 영역 -->
         <div class="slide section">
             <div class="view">
                 <div class="slide_box">
@@ -79,61 +80,33 @@
                 <li class="circle"><a href="#"></a></li>
             </ul>
         </div>
+        <!-- popular_local 영역 -->
         <div class="popular_local section">
             <div class="center">
                 <div class="title_box">
-                    <h2 class="title">최근 인기있는 지역!</h2>
+                    <h2 class="title">최근 인기있는 관광지!</h2>
                     <p class="sub_title">가고싶은 힐링지역을 선택하세요</p>
                 </div>
                 <div class="local_wrap">
+                    <% for(let i=0; i<popular_list.length; i++){ %>
                     <div class="local_box mg">
                         <div class="text_box">
-                            <p class="text1">서울</p>
-                            <p class="text2">서울시 어딘가</p>
+                            <p class="text1"><%- popular_list[i].text1 %></p>
+                            <p class="text2"><%- popular_list[i].text2 %></p>
                         </div>
                         <div class="hover_box">
-                            주소쓰기
+                            <div class="wrap">
+                                <p class="local"><%- popular_list[i].local %></p>
+                                <p class="addr"><%- popular_list[i].addr %></p>
+                                <p class="call"><%- popular_list[i].call %></p>
+                            </div>
                         </div>
                     </div>
-                    <div class="local_box mg">
-                        <div class="text_box">
-                            <p class="text1">서울</p>
-                            <p class="text2">서울시 어딘가</p>
-                        </div>
-                        <div class="hover_box">
-                            주소쓰기
-                        </div>
-                    </div>
-                    <div class="local_box mg">
-                        <div class="text_box">
-                            <p class="text1">서울</p>
-                            <p class="text2">서울시 어딘가</p>
-                        </div>
-                        <div class="hover_box">
-                            주소쓰기
-                        </div>
-                    </div>
-                    <div class="local_box">
-                        <div class="text_box">
-                            <p class="text1">서울</p>
-                            <p class="text2">서울시 어딘가</p>
-                        </div>
-                        <div class="hover_box">
-                            주소쓰기
-                        </div>
-                    </div>
-                    <div class="local_box">
-                        <div class="text_box">
-                            <p class="text1">서울</p>
-                            <p class="text2">서울시 어딘가</p>
-                        </div>
-                        <div class="hover_box">
-                            주소쓰기
-                        </div>
-                    </div>
+                    <% } %>
                 </div>
             </div>
         </div>
+        <!-- local_video 영역 -->
         <div class="local_video section">
             <div class="center">
                 <div class="title_box">
@@ -189,6 +162,7 @@
                 </div>
             </div>
         </div>
+        <!-- tour_bus 영역 -->
         <div class="tour_bus section">
             <div class="center">
                 <div class="title_box">
@@ -198,7 +172,21 @@
                 <div class="bus_wrap">
                     <div class="bus_box">
                         <div class="tour_img">
-                            <img src="/img/popular.jpg" alt="">
+                            <img src="/img/bus_tour01.jpg" alt="">
+                        </div>
+                        <div class="tour_info">
+                            <p class="tour_title">강릉 자유여행 당일출발</p>
+                            <p class="hash_tag">
+                                <span>#경포해변</span>
+                                <span>#오죽헌</span>
+                                <span>#하슬라 아트월드</span>
+                            </p>
+                            <p class="price"><span>138,000</span>원~</p>
+                        </div>
+                    </div>
+                    <div class="bus_box">
+                        <div class="tour_img">
+                            <img src="/img/bus_tour01.jpg" alt="">
                         </div>
                         <div class="tour_info">
                             <p class="tour_title">부산 자유여행 당일치기</p>
@@ -212,7 +200,7 @@
                     </div>
                     <div class="bus_box">
                         <div class="tour_img">
-                            <img src="/img/popular.jpg" alt="">
+                            <img src="/img/bus_tour01.jpg" alt="">
                         </div>
                         <div class="tour_info">
                             <p class="tour_title">부산 자유여행 당일치기</p>
@@ -226,21 +214,7 @@
                     </div>
                     <div class="bus_box">
                         <div class="tour_img">
-                            <img src="/img/popular.jpg" alt="">
-                        </div>
-                        <div class="tour_info">
-                            <p class="tour_title">부산 자유여행 당일치기</p>
-                            <p class="hash_tag">
-                                <span>#해운대</span>
-                                <span>#어디가</span>
-                                <span>#유명할까</span>
-                            </p>
-                            <p class="price"><span>138,000</span>원~</p>
-                        </div>
-                    </div>
-                    <div class="bus_box">
-                        <div class="tour_img">
-                            <img src="/img/popular.jpg" alt="">
+                            <img src="/img/bus_tour01.jpg" alt="">
                         </div>
                         <div class="tour_info">
                             <p class="tour_title">부산 자유여행 당일치기</p>
@@ -255,37 +229,40 @@
                 </div>
             </div>
         </div>
+        <!-- local_count 영역 -->
+        <!-- 53참조 -->
         <div class="local_count section">
             <div class="center">
                 <div class="count_wrap">
                     <div class="count_box">
-                        <div class="icon"><i class="fa-solid fa-tower-observation"></i></div>
+                        <div class="img"><img src="/img/symbol01.jpg" alt=""></div>
                         <p class="local_name">제주</p>
                         <p class="count_number">0</p>
                     </div>
                     <div class="count_box">
-                        <div class="icon"><i class="fa-solid fa-tower-observation"></i></div>
-                        <p class="local_name">광주</p>
-                        <p class="count_number">0</p>
-                    </div>
-                    <div class="count_box">
-                        <div class="icon"><i class="fa-solid fa-tower-observation"></i></div>
+                        <div class="img"><img src="/img/symbol02.jpg" alt=""></div>
                         <p class="local_name">부산</p>
                         <p class="count_number">0</p>
                     </div>
                     <div class="count_box">
-                        <div class="icon"><i class="fa-solid fa-tower-observation"></i></div>
+                        <div class="img"><img src="/img/symbol03.jpg" alt=""></div>
+                        <p class="local_name">서울</p>
+                        <p class="count_number">0</p>
+                    </div>
+                    <div class="count_box">
+                        <div class="img"><img src="/img/symbol04.jpg" alt=""></div>
                         <p class="local_name">전주</p>
                         <p class="count_number">0</p>
                     </div>
                     <div class="count_box">
-                        <div class="icon"><i class="fa-solid fa-tower-observation"></i></div>
+                        <div class="img"><img src="/img/symbol05.jpg" alt=""></div>
                         <p class="local_name">강릉</p>
                         <p class="count_number">0</p>
                     </div>
                 </div>
             </div>
         </div>
+        <!-- package 영역 -->
         <div class="package section">
             <div class="center">
                 <div class="title_box">
@@ -303,11 +280,89 @@
                     </div>
                     <div class="right">
                         <!-- 제주wrap 안 패키지 상품들 -->
-                        <div class="jeju local">
+                        <div class="jeju local on">
                             <div class="box">
                                 <img src="/img/popular.jpg" alt="">
                                 <div class="package_info">
                                     <p class="tour_title">제주 패키지여행 당일치기</p>
+                                    <p class="hash_tag">
+                                        <span>#성산일출봉</span>
+                                        <span>#우도</span>
+                                        <span>#용어쩌구</span>
+                                    </p>
+                                    <p class="price"><span>138,000</span>원~</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <img src="/img/popular.jpg" alt="">
+                                <div class="package_info">
+                                    <p class="tour_title">제주 패키지여행 당일치기</p>
+                                    <p class="hash_tag">
+                                        <span>#성산일출봉</span>
+                                        <span>#우도</span>
+                                        <span>#용어쩌구</span>
+                                    </p>
+                                    <p class="price"><span>138,000</span>원~</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <img src="/img/popular.jpg" alt="">
+                                <div class="package_info">
+                                    <p class="tour_title">제주 패키지여행 당일치기</p>
+                                    <p class="hash_tag">
+                                        <span>#성산일출봉</span>
+                                        <span>#우도</span>
+                                        <span>#용어쩌구</span>
+                                    </p>
+                                    <p class="price"><span>138,000</span>원~</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 춘천 -->
+                        <div class="chuncheon local">
+                            <div class="box">
+                                <img src="/img/popular.jpg" alt="">
+                                <div class="package_info">
+                                    <p class="tour_title">춘천 패키지여행 당일치기</p>
+                                    <p class="hash_tag">
+                                        <span>#성산일출봉</span>
+                                        <span>#우도</span>
+                                        <span>#용어쩌구</span>
+                                    </p>
+                                    <p class="price"><span>138,000</span>원~</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <img src="/img/popular.jpg" alt="">
+                                <div class="package_info">
+                                    <p class="tour_title">제주 패키지여행 당일치기</p>
+                                    <p class="hash_tag">
+                                        <span>#성산일출봉</span>
+                                        <span>#우도</span>
+                                        <span>#용어쩌구</span>
+                                    </p>
+                                    <p class="price"><span>138,000</span>원~</p>
+                                </div>
+                            </div>
+                            <div class="box">
+                                <img src="/img/popular.jpg" alt="">
+                                <div class="package_info">
+                                    <p class="tour_title">제주 패키지여행 당일치기</p>
+                                    <p class="hash_tag">
+                                        <span>#성산일출봉</span>
+                                        <span>#우도</span>
+                                        <span>#용어쩌구</span>
+                                    </p>
+                                    <p class="price"><span>138,000</span>원~</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 남양주 -->
+                        <div class="namyangju local">
+                            <div class="box">
+                                <img src="/img/popular.jpg" alt="">
+                                <div class="package_info">
+                                    <p class="tour_title">남양주 패키지여행 당일치기</p>
                                     <p class="hash_tag">
                                         <span>#성산일출봉</span>
                                         <span>#우도</span>
@@ -370,8 +425,14 @@
             </div>
         </div> -->
     </div>
+    <!-- 맨 위로 가는 기능 -->
+    <%- include("common/go_top.ejs"); %>
+    <!-- 하단영역 -->
     <%- include("common/footer.ejs"); %>
     <!-- js -->
-    <script src="/js/slide.js"></script>
+    <!-- <script src="/js/slide.js"></script> -->
+    <script src="/js/count.js"></script>
+    <script src="/js/package_tab.js"></script>
+    <!-- 패키지여행 / 인기있는지역 등 a태그 추가하기 -->
 </body>
 </html>
