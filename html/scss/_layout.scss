@@ -816,7 +816,35 @@
     position: fixed; right: 20px; bottom: 20px;
     cursor: pointer;
 }
-
+// 비어있는 서브페이지
+#nothing {
+    height: 500px;
+    display: flex; justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 100px 0 150px;
+    .wrap {
+        .icon {
+            margin: 0 auto 45px;
+            width: 180px; line-height: 180px;
+            border-radius: 50%;
+            border: 15px solid #00d3ff;
+            font-size: 100px;
+            color: #00d3ff;
+        }
+        .text1 {font-size: 30px; margin-bottom: 17px;}
+        .text2 {
+            font-size: 15px; line-height: 20px;
+            margin-bottom: 20px; color: #757575;
+        }
+        .text3 {
+            margin-bottom: 20px;
+            color: #757575;
+            span {font-size: 20px; color: #00d3ff;}
+        }
+        .thank {font-size: 20px;}
+    }
+}
 // 로그인 영역
 #login {
     height: 100vh; display: flex;

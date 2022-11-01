@@ -54,6 +54,11 @@ app.get("/hotel",function(req,res){
     res.render("travel_hotel", {userData:req.user});
 });
 
+//나머지 서브페이지 경로 요청
+app.get("/nothing",function(req,res){
+    res.render("nothing", {userData:req.user});
+});
+
 //파일첨부 어디에 저장할 것인지에 대한 기능
 const storage = multer.diskStorage({
     destination: function (req, file, cb) {
