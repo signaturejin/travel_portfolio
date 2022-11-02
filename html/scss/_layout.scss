@@ -192,6 +192,7 @@
     .popular_local {
         display: flex; justify-content: center;
         padding-top: 120px;
+        overflow: hidden;
         .center {
             width: 70%;
             .title_box {
@@ -208,25 +209,31 @@
                     position: relative;
                     overflow: hidden;
                     border-radius: 10px;
+                    transition: all 0.5s;
                     box-shadow: 3px 5px 10px rgba(0,0,0,0.3);
                     &:hover {
                         .hover_box {bottom: 0;}
                     }
                     &:nth-child(1) {
                         background-image: url(/img/popular01.jpg);
-                        transform: translateX(-100%);
+                        transform: translateX(-200%);
                     }
                     &:nth-child(2) {
                         background-image: url(/img/popular02.jpg);
+                        transform: translateY(-200%);
                     }
                     &:nth-child(3) {
                         background-image: url(/img/popular03.jpg);
+                        transform: translateX(200%);
                     }
                     &:nth-child(4) {
                         background-image: url(/img/popular04.jpg);
-                        width: 66%;}
+                        width: 66%;
+                        transform: translateY(200%);
+                    }
                     &:nth-child(5) {
                         background-image: url(/img/popular05.jpg);
+                        transform: translateY(200%);
                     }
                     .text_box { 
                         color: #fff;
@@ -259,10 +266,12 @@
     }
     .section.on {
         //클래스 'on' 붙은 popular_local 영역
-        .local_box {
-            &:nth-child(1) {
-                background-image: url(/img/popular01.jpg);
-                transform: translateX(0);
+        .center {
+            .local_wrap {
+                .local_box {
+                    &:nth-child(1),&:nth-child(3) {transform: translateX(0);}
+                    &:nth-child(2),&:nth-child(4),&:nth-child(5) {transform: translateY(0);}
+                }
             }
         }
     }
@@ -435,7 +444,7 @@
                     .package_menu {
                         li {
                             width: 53%;
-                            background-color: #f5f5f5;
+                            background-color: #dce8f9;
                             border-radius: 10px;
                             margin-bottom: 18px;
                             line-height: 45px;

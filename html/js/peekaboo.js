@@ -13,7 +13,7 @@ window.addEventListener("scroll",()=>{
         secTop[index] = item.offsetTop;
 
         //조건문을 사용하여 해당 구간에서 요소들이 나타남
-        if(scTop >= section[index] && scTop < section[index + 1]){
+        if(scTop >= secTop[index] && scTop < secTop[index + 1]){
             section[index].classList.add("on");
         }
         // else if(scTop >= section[6]){

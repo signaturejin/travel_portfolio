@@ -273,6 +273,7 @@ body::-webkit-scrollbar-track {
   display: flex;
   justify-content: center;
   padding-top: 120px;
+  overflow: hidden;
 }
 #container .popular_local .center {
   width: 70%;
@@ -300,6 +301,7 @@ body::-webkit-scrollbar-track {
   position: relative;
   overflow: hidden;
   border-radius: 10px;
+  transition: all 0.5s;
   box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.3);
 }
 #container .popular_local .center .local_wrap .local_box:hover .hover_box {
@@ -307,20 +309,24 @@ body::-webkit-scrollbar-track {
 }
 #container .popular_local .center .local_wrap .local_box:nth-child(1) {
   background-image: url(/img/popular01.jpg);
-  transform: translateX(-100%);
+  transform: translateX(-200%);
 }
 #container .popular_local .center .local_wrap .local_box:nth-child(2) {
   background-image: url(/img/popular02.jpg);
+  transform: translateY(-200%);
 }
 #container .popular_local .center .local_wrap .local_box:nth-child(3) {
   background-image: url(/img/popular03.jpg);
+  transform: translateX(200%);
 }
 #container .popular_local .center .local_wrap .local_box:nth-child(4) {
   background-image: url(/img/popular04.jpg);
   width: 66%;
+  transform: translateY(200%);
 }
 #container .popular_local .center .local_wrap .local_box:nth-child(5) {
   background-image: url(/img/popular05.jpg);
+  transform: translateY(200%);
 }
 #container .popular_local .center .local_wrap .local_box .text_box {
   color: #fff;
@@ -363,9 +369,11 @@ body::-webkit-scrollbar-track {
 #container .popular_local .center .local_wrap .mg {
   margin-bottom: 2%;
 }
-#container .section.on .local_box:nth-child(1) {
-  background-image: url(/img/popular01.jpg);
+#container .section.on .center .local_wrap .local_box:nth-child(1), #container .section.on .center .local_wrap .local_box:nth-child(3) {
   transform: translateX(0);
+}
+#container .section.on .center .local_wrap .local_box:nth-child(2), #container .section.on .center .local_wrap .local_box:nth-child(4), #container .section.on .center .local_wrap .local_box:nth-child(5) {
+  transform: translateY(0);
 }
 #container .local_video {
   display: flex;
@@ -595,7 +603,7 @@ body::-webkit-scrollbar-track {
 }
 #container .package .center .package_wrap .left .package_menu li {
   width: 53%;
-  background-color: #f5f5f5;
+  background-color: #dce8f9;
   border-radius: 10px;
   margin-bottom: 18px;
   line-height: 45px;
