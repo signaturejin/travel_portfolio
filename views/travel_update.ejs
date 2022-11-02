@@ -32,7 +32,8 @@
                     </div>
                     <div class="file_wrap">
                         <p class="file_text">대표사진</p>
-                        <input type="file" class="file" name="file" placeholder="thumbnail" value="<%- brdData.user_file %>">
+                        <input type="file" class="file" name="file" placeholder="thumbnail">
+                        <input type="hidden" name="originFile" value="<%- brdData.user_file %>">
                     </div>
                     <div class="bar"></div>
                     <div class="context_wrap">

@@ -1,5 +1,6 @@
 // 필요한 태그 생성
 const section = document.querySelectorAll(".section");
+let secTop = [];
 
 // 스크롤 이벤트
 window.addEventListener("scroll",()=>{
@@ -8,11 +9,11 @@ window.addEventListener("scroll",()=>{
     let scTop = window.scrollY;
 
     //각 구역의 시작위치값 반복문을 사용하여 배열에 담기
-    let secTop = [];
+    
     section.forEach((item,index)=>{
         secTop[index] = item.offsetTop;
 
-        //조건문을 사용하여 해당 구간에서 요소들이 나타남
+        //조건문을 사용하여 해당 구간에서 요소들이 나타남 0 - 6
         if(scTop >= secTop[index] && scTop < secTop[index + 1]){
             section[index].classList.add("on");
         }

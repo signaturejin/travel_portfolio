@@ -35,7 +35,11 @@
                             </div>
                         </div>
                         <div class="right">
+                            <% if(brdData[i].user_file) { %>
                             <img src="/upload/<%- brdData[i].user_file %>" alt="">
+                            <% } else{ %>
+                            <img src="/img/noimgs.jpg">
+                            <%}%>
                         </div>
                     </div>
                     <% } %>

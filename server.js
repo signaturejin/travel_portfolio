@@ -78,15 +78,25 @@ app.get("/insert",function(req,res){
     res.render("travel_insert", {userData:req.user});
 });
 
+
 //게시판 작성데이터 데이터베이스에 저장
 app.post("/insertAdd",upload.single('file'),function(req,res){
+    //첨부파일이 있을때는 첨부파일명 들어가면 되고 req.file.originalname
+    //없을때는 null
+    if(req.file){
+        fileUpload = req.file.originalname;
+    }
+    else{
+        fileUpload = null;
+    }
+
     db.collection("travel_count").findOne({name:"게시판"},function(err,cResult){
         db.collection("travel_board").insertOne({
             brd_no: cResult.boardCount + 1,                                     //게시글 번호
             user_id: req.body.user_brd_id,                                      //사용자 아이디
             user_name: req.user.member_name,                                           //사용자 이름
             user_title: req.body.title,                                         //게시글 제목
-            user_file: req.file.originalname,                                   //올린 파일
+            user_file: fileUpload,                                   //올린 파일
             user_context: req.body.context,                                     //작성내용
             user_review: 0,                                                     //조회수
             insert_date:moment().tz("Asia/Seoul").format("YYYY-MM-DD HH:mm") //작성날짜
@@ -160,9 +170,18 @@ app.get("/update/:no",function(req,res){
 
 //게시판 수정 기능
 app.post("/updateAdd",upload.single('file'),function(req,res){
+
+    if(req.file){
+        fileUpload = req.file.originalname; //첨부파일 있을때는 첨부된 파일이름
+    }
+    else{
+        fileUpload = req.body.originFile; //첨부파일 없을때는 기존파일명
+    }
+
+
     db.collection("travel_board").updateOne({brd_no: Number(req.body.brd_no)},{$set:{
         user_title: req.body.title,                                         //게시글 제목
-        user_file: req.file.originalname,                                   //올린 파일
+        user_file:fileUpload,                                   //올린 파일
         user_context: req.body.context                                      //작성내용
     }},function(err,result){
         res.redirect("/detail/" + req.body.brd_no);

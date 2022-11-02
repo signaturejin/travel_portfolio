@@ -21,7 +21,11 @@
                     </div>
                     <div class="bar"></div>
                     <div class="context">
-                        <div class="user_img"><img src="/upload/<%- brdData.user_file %>" alt=""></div>
+                        <div class="user_img">
+                            <% if(brdData.user_file){ %>
+                            <img src="/upload/<%- brdData.user_file %>" alt="">
+                            <% } %>
+                        </div>
                         <div class="user_context"><%- brdData.user_context %></div>
                     </div>
                     <div class="detail_bot">
