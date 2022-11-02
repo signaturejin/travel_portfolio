@@ -4,9 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>메인페이지</title>
+    <title>동글투어</title>
     <%- include("common/font_icon.ejs"); %>
     <link rel="stylesheet" href="/css/style.css">
+    <!-- 파비콘 -->
+    <link rel="shortcut icon" href="/favicon/favicon.ico" type="image/x-icon">
+    <link rel="icon" href="/favicon/favicon.ico" type="image/x-icon">
 </head>
 <body>
     <%- include("common/header.ejs"); %>
@@ -17,10 +20,10 @@
                 <div class="slide_box">
                     <div class="bg"></div>
                     <div class="text_box">
-                        <h2 class="slide_title">타이틀입니다1</h2>
+                        <h2 class="slide_title">지금 바로 떠나자!<br>꿈꾸던 여행지</h2>
                         <p class="sub_text">
-                            첫번째 문단입니다.<br>
-                            두번째 문단입니다.
+                            지친 나에게도 자유를..<br>
+                            힐링을 가질 수 있도록 돕겠습니다.
                         </p>
                         <div class="slide_btn">
                             <a href="#">바로가기</a>
@@ -31,10 +34,10 @@
                     <div class="bg"></div>
                     <div class="text_box">
                         <div class="bg_wrap">
-                            <h2 class="slide_title">타이틀입니다2</h2>
+                            <h2 class="slide_title">숲이 그립다면 여기로,</h2>
                             <p class="sub_text">
-                                첫번째 문단입니다.<br>
-                                두번째 문단입니다.
+                                푸른 자연과 맑은 공기를 반겨주는 이곳으로<br>
+                                어서오세요.
                             </p>
                             <div class="slide_btn">
                                 <a href="#">바로가기</a>
@@ -45,10 +48,10 @@
                 <div class="slide_box">
                     <div class="bg"></div>
                     <div class="text_box">
-                        <h2 class="slide_title">타이틀입니다3</h2>
+                        <h2 class="slide_title">한옥마을이 궁금해?</h2>
                         <p class="sub_text">
-                            첫번째 문단입니다.<br>
-                            두번째 문단입니다.
+                            역사의 깊이와 지식을 배울 수 있는<br>
+                            전주로 같이 가요~
                         </p>
                         <div class="slide_btn">
                             <a href="#">바로가기</a>
@@ -58,7 +61,7 @@
                 <div class="slide_box">
                     <div class="bg"></div>
                     <div class="text_box">
-                        <h2 class="slide_title">타이틀입니다4</h2>
+                        <h2 class="slide_title">산 속 호텔 캠핑!</h2>
                         <p class="sub_text">
                             첫번째 문단입니다.<br>
                             두번째 문단입니다.
@@ -94,13 +97,15 @@
                             <p class="text1"><%- popular_list[i].text1 %></p>
                             <p class="text2"><%- popular_list[i].text2 %></p>
                         </div>
-                        <div class="hover_box">
-                            <div class="wrap">
-                                <p class="local"><%- popular_list[i].local %></p>
-                                <p class="addr"><%- popular_list[i].addr %></p>
-                                <p class="call"><%- popular_list[i].call %></p>
+                        <a href="#">
+                            <div class="hover_box">
+                                <div class="wrap">
+                                    <p class="local"><%- popular_list[i].local %></p>
+                                    <p class="addr"><%- popular_list[i].addr %></p>
+                                    <p class="call"><%- popular_list[i].call %></p>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <% } %>
                 </div>
@@ -119,42 +124,41 @@
                     </div>
                     <div class="right">
                         <div class="box_list">
-                            <div class="icon"><i class="fa-solid fa-earth-americas"></i></div>
+                            <img class="phcheon_img" src="/img/pocheon01.jpg" alt="">
                             <div class="text_box">
-                                <p class="text1">포천 반월성</p>
+                                <p class="text1"><a href="#">포천 반월성</a></p>
                                 <p class="text2">
-                                    첫번째 문단입니다.<br>
-                                    두번째 문단입니다.
+                                    포천 반월성은 경기도 포천시 군내면 구읍리, 청성산에 있는 산성입니다.
+                                    1998년 2월 20일 대한민국의 사적 제403호 포천반월성지로 지정되었으나, 2011년 7월 28일 포천 반월성으로 문화재 명칭이 변경되었습니다.
                                 </p>
                             </div>
                         </div>
                         <div class="box_list">
-                            <div class="icon"><i class="fa-solid fa-earth-americas"></i></div>
+                            <img class="phcheon_img" src="/img/pocheon02.jpg" alt="">
                             <div class="text_box">
-                                <p class="text1">포천아트밸리</p>
+                                <p class="text1"><a href="#">포천아트밸리</a></p>
                                 <p class="text2">
-                                    첫번째 문단입니다.<br>
-                                    두번째 문단입니다.
+                                    포천 아트밸리는 2003년부터 버려져 방치되어 있었던 신북면 기지리의 폐채석장의 환경을 복원한 복합 문화예술공간입니다.
+                                    이곳에서 아름다운 자연과 예술을 같이 느낄 수 있습니다.
                                 </p>
                             </div>
                         </div>
                         <div class="box_list">
-                            <div class="icon"><i class="fa-solid fa-earth-americas"></i></div>
+                            <img class="phcheon_img" src="/img/pocheon03.jpg" alt="">
                             <div class="text_box">
-                                <p class="text1">고모호수공원</p>
+                                <p class="text1"><a href="#">고모호수공원</a></p>
                                 <p class="text2">
-                                    첫번째 문단입니다.<br>
-                                    두번째 문단입니다.
+                                    본래 포천평야에 농업용수를 확보하기 위한 목적으로 건설됐지만 현재는 자연공원의 역할을 하고 있습니다.
+                                    가볍게 산책을 즐길 수도 있지만 저수지 일대를 편하게 구경할 수 있도록 유람선과 모터보트, 오리배 등도 마련돼있습니다.<br>
                                 </p>
                             </div>
                         </div>
                         <div class="box_list">
-                            <div class="icon"><i class="fa-solid fa-earth-americas"></i></div>
+                            <img class="phcheon_img" src="/img/pocheon04.jpg" alt="">
                             <div class="text_box">
-                                <p class="text1">허브아일랜드</p>
+                                <p class="text1"><a href="#">허브아일랜드</a></p>
                                 <p class="text2">
-                                    첫번째 문단입니다.<br>
-                                    두번째 문단입니다.
+                                    13만평의 부지위에 허브의 원산지인 지중해의 '생활속의 허브'를 테마로 운영하고 있습니다. 허브식물박물관, 산속정원, 산타마을 등의 30여가지 관광, 편의시설이 있으며, 매년 불빛동화축제를 개최하고 있습니다.
                                 </p>
                             </div>
                         </div>
@@ -171,60 +175,68 @@
                 </div>
                 <div class="bus_wrap">
                     <div class="bus_box">
-                        <div class="tour_img">
-                            <img src="/img/bus_tour01.jpg" alt="">
-                        </div>
-                        <div class="tour_info">
-                            <p class="tour_title">강릉 자유여행 당일출발</p>
-                            <p class="hash_tag">
-                                <span>#경포해변</span>
-                                <span>#오죽헌</span>
-                                <span>#하슬라 아트월드</span>
-                            </p>
-                            <p class="price"><span>138,000</span>원~</p>
-                        </div>
+                        <a href="#">
+                            <div class="tour_img">
+                                <img src="/img/bus_tour01.jpg" alt="">
+                            </div>
+                            <div class="tour_info">
+                                <p class="tour_title">강릉 자유여행 당일출발</p>
+                                <p class="hash_tag">
+                                    <span>#경포해변</span>
+                                    <span>#오죽헌</span>
+                                    <span>#하슬라 아트월드</span>
+                                </p>
+                                <p class="price"><span>138,000</span>원~</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="bus_box">
-                        <div class="tour_img">
-                            <img src="/img/bus_tour01.jpg" alt="">
-                        </div>
-                        <div class="tour_info">
-                            <p class="tour_title">부산 자유여행 당일치기</p>
-                            <p class="hash_tag">
-                                <span>#해운대</span>
-                                <span>#어디가</span>
-                                <span>#유명할까</span>
-                            </p>
-                            <p class="price"><span>138,000</span>원~</p>
-                        </div>
+                        <a href="#">
+                            <div class="tour_img">
+                                <img src="/img/bus_tour02.jpg" alt="">
+                            </div>
+                            <div class="tour_info">
+                                <p class="tour_title">인천으로 떠나자! 인천 야경 투어</p>
+                                <p class="hash_tag">
+                                    <span>#송도센트럴파크</span>
+                                    <span>#월미도</span>
+                                    <span>#동화마을</span>
+                                </p>
+                                <p class="price"><span>210,000</span>원~</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="bus_box">
-                        <div class="tour_img">
-                            <img src="/img/bus_tour01.jpg" alt="">
-                        </div>
-                        <div class="tour_info">
-                            <p class="tour_title">부산 자유여행 당일치기</p>
-                            <p class="hash_tag">
-                                <span>#해운대</span>
-                                <span>#어디가</span>
-                                <span>#유명할까</span>
-                            </p>
-                            <p class="price"><span>138,000</span>원~</p>
-                        </div>
+                        <a href="#">
+                            <div class="tour_img">
+                                <img src="/img/bus_tour03.jpg" alt="">
+                            </div>
+                            <div class="tour_info">
+                                <p class="tour_title">청춘여행, 전주로 출발하자!</p>
+                                <p class="hash_tag">
+                                    <span>#전주한옥마을</span>
+                                    <span>#풍남문</span>
+                                    <span>#전주향교</span>
+                                </p>
+                                <p class="price"><span>273,000</span>원~</p>
+                            </div>
+                        </a>
                     </div>
                     <div class="bus_box">
-                        <div class="tour_img">
-                            <img src="/img/bus_tour01.jpg" alt="">
-                        </div>
-                        <div class="tour_info">
-                            <p class="tour_title">부산 자유여행 당일치기</p>
-                            <p class="hash_tag">
-                                <span>#해운대</span>
-                                <span>#어디가</span>
-                                <span>#유명할까</span>
-                            </p>
-                            <p class="price"><span>138,000</span>원~</p>
-                        </div>
+                        <a href="#">
+                            <div class="tour_img">
+                                <img src="/img/bus_tour04.jpg" alt="">
+                            </div>
+                            <div class="tour_info">
+                                <p class="tour_title">고창 1박 2일 버스투어</p>
+                                <p class="hash_tag">
+                                    <span>#고창읍성</span>
+                                    <span>#선운사</span>
+                                    <span>#고인돌공원</span>
+                                </p>
+                                <p class="price"><span>358,000</span>원~</p>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -232,6 +244,9 @@
         <!-- local_count 영역 -->
         <div class="local_count section">
             <div class="center">
+                <div class="title_box">
+                    <h2 class="title">이번 달 많이 찾은 지역</h2>
+                </div>
                 <div class="count_wrap">
                     <div class="count_box">
                         <div class="img"><img src="/img/symbol01.jpg" alt=""></div>
@@ -273,126 +288,162 @@
                         <p class="big_text">가고싶은 곳 어디든<br>갈 수 있는 패키지여행!</p>
                         <ul class="package_menu">
                             <li><a href="#">힐링의 대명사, 제주</a></li>
-                            <li><a href="#">다양한 문화재가 한자리에, 서울</a></li>
-                            <li><a href="#">제 2의 수도권, 부산</a></li>
+                            <li><a href="#">드넓은 푸른색, 남양주</a></li>
+                            <li><a href="#">바다를 품은, 부산</a></li>
                         </ul>
                     </div>
                     <div class="right">
                         <!-- 제주wrap 안 패키지 상품들 -->
                         <div class="jeju local on">
                             <div class="box">
-                                <img src="/img/popular.jpg" alt="">
-                                <div class="package_info">
-                                    <p class="tour_title">제주 패키지여행 당일치기</p>
-                                    <p class="hash_tag">
-                                        <span>#성산일출봉</span>
-                                        <span>#우도</span>
-                                        <span>#용어쩌구</span>
-                                    </p>
-                                    <p class="price"><span>138,000</span>원~</p>
-                                </div>
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="/img/package_jeju01.jpg" alt="제주의 섭지코지 이미지입니다.">
+                                    </div>
+                                    <div class="package_info">
+                                        <p class="tour_title">제주 패키지여행 당일치기</p>
+                                        <p class="hash_tag">
+                                            <span>#성산일출봉</span>
+                                            <span>#우도</span>
+                                            <span>#섭지코지</span>
+                                        </p>
+                                        <p class="price"><span>138,000</span>원~</p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="box">
-                                <img src="/img/popular.jpg" alt="">
-                                <div class="package_info">
-                                    <p class="tour_title">제주 패키지여행 당일치기</p>
-                                    <p class="hash_tag">
-                                        <span>#성산일출봉</span>
-                                        <span>#우도</span>
-                                        <span>#용어쩌구</span>
-                                    </p>
-                                    <p class="price"><span>138,000</span>원~</p>
-                                </div>
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="/img/package_jeju02.jpg" alt="제주의 메이즈랜드 이미지입니다.">
+                                    </div>
+                                    <div class="package_info">
+                                        <p class="tour_title">제주 패키지여행 당일치기</p>
+                                        <p class="hash_tag">
+                                            <span>#메이즈랜드</span>
+                                            <span>#우도</span>
+                                            <span>#용어쩌구</span>
+                                        </p>
+                                        <p class="price"><span>138,000</span>원~</p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="box">
-                                <img src="/img/popular.jpg" alt="">
-                                <div class="package_info">
-                                    <p class="tour_title">제주 패키지여행 당일치기</p>
-                                    <p class="hash_tag">
-                                        <span>#성산일출봉</span>
-                                        <span>#우도</span>
-                                        <span>#용어쩌구</span>
-                                    </p>
-                                    <p class="price"><span>138,000</span>원~</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- 춘천 -->
-                        <div class="chuncheon local">
-                            <div class="box">
-                                <img src="/img/popular.jpg" alt="">
-                                <div class="package_info">
-                                    <p class="tour_title">춘천 패키지여행 당일치기</p>
-                                    <p class="hash_tag">
-                                        <span>#성산일출봉</span>
-                                        <span>#우도</span>
-                                        <span>#용어쩌구</span>
-                                    </p>
-                                    <p class="price"><span>138,000</span>원~</p>
-                                </div>
-                            </div>
-                            <div class="box">
-                                <img src="/img/popular.jpg" alt="">
-                                <div class="package_info">
-                                    <p class="tour_title">제주 패키지여행 당일치기</p>
-                                    <p class="hash_tag">
-                                        <span>#성산일출봉</span>
-                                        <span>#우도</span>
-                                        <span>#용어쩌구</span>
-                                    </p>
-                                    <p class="price"><span>138,000</span>원~</p>
-                                </div>
-                            </div>
-                            <div class="box">
-                                <img src="/img/popular.jpg" alt="">
-                                <div class="package_info">
-                                    <p class="tour_title">제주 패키지여행 당일치기</p>
-                                    <p class="hash_tag">
-                                        <span>#성산일출봉</span>
-                                        <span>#우도</span>
-                                        <span>#용어쩌구</span>
-                                    </p>
-                                    <p class="price"><span>138,000</span>원~</p>
-                                </div>
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="/img/package_jeju03.jpg" alt="제주의 한라수목원 이미지입니다.">
+                                    </div>
+                                    <div class="package_info">
+                                        <p class="tour_title">제주 패키지여행 당일치기</p>
+                                        <p class="hash_tag">
+                                            <span>#한라수목원</span>
+                                            <span>#우도</span>
+                                            <span>#용어쩌구</span>
+                                        </p>
+                                        <p class="price"><span>138,000</span>원~</p>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                         <!-- 남양주 -->
                         <div class="namyangju local">
                             <div class="box">
-                                <img src="/img/popular.jpg" alt="">
-                                <div class="package_info">
-                                    <p class="tour_title">남양주 패키지여행 당일치기</p>
-                                    <p class="hash_tag">
-                                        <span>#성산일출봉</span>
-                                        <span>#우도</span>
-                                        <span>#용어쩌구</span>
-                                    </p>
-                                    <p class="price"><span>138,000</span>원~</p>
-                                </div>
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="/img/package_namyangju01.jpg" alt="남양주의 아침고요수목원 이미지입니다.">
+                                    </div>
+                                    <div class="package_info">
+                                        <p class="tour_title">남양주 패키지여행 당일치기</p>
+                                        <p class="hash_tag">
+                                            <span>#아침고요수목원</span>
+                                            <span>#우도</span>
+                                            <span>#용어쩌구</span>
+                                        </p>
+                                        <p class="price"><span>138,000</span>원~</p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="box">
-                                <img src="/img/popular.jpg" alt="">
-                                <div class="package_info">
-                                    <p class="tour_title">제주 패키지여행 당일치기</p>
-                                    <p class="hash_tag">
-                                        <span>#성산일출봉</span>
-                                        <span>#우도</span>
-                                        <span>#용어쩌구</span>
-                                    </p>
-                                    <p class="price"><span>138,000</span>원~</p>
-                                </div>
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="/img/package_namyangju02.jpg" alt="남양주의 두물머리 이미지입니다.">
+                                    </div>
+                                    <div class="package_info">
+                                        <p class="tour_title">남양주 패키지여행 당일치기</p>
+                                        <p class="hash_tag">
+                                            <span>#두물머리</span>
+                                            <span>#우도</span>
+                                            <span>#용어쩌구</span>
+                                        </p>
+                                        <p class="price"><span>138,000</span>원~</p>
+                                    </div>
+                                </a>
                             </div>
                             <div class="box">
-                                <img src="/img/popular.jpg" alt="">
-                                <div class="package_info">
-                                    <p class="tour_title">제주 패키지여행 당일치기</p>
-                                    <p class="hash_tag">
-                                        <span>#성산일출봉</span>
-                                        <span>#우도</span>
-                                        <span>#용어쩌구</span>
-                                    </p>
-                                    <p class="price"><span>138,000</span>원~</p>
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="/img/package_namyangju03.jpg" alt="남양주의 세미원 이미지입니다.">
+                                    </div>
+                                    <div class="package_info">
+                                        <p class="tour_title">남양주 패키지여행 당일치기</p>
+                                        <p class="hash_tag">
+                                            <span>#세미원</span>
+                                            <span>#우도</span>
+                                            <span>#용어쩌구</span>
+                                        </p>
+                                        <p class="price"><span>138,000</span>원~</p>
+                                    </div>
                                 </div>
+                            </a>
+                        </div>
+                        <!-- 부산 -->
+                        <div class="busan local">
+                            <div class="box">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="/img/package_busan01.jpg" alt="부산의 낙조분수 이미지입니다.">
+                                    </div>
+                                    <div class="package_info">
+                                        <p class="tour_title">부산 패키지여행 당일치기</p>
+                                        <p class="hash_tag">
+                                            <span>#낙조분수</span>
+                                            <span>#송도해수욕장</span>
+                                            <span>#용두산공원</span>
+                                        </p>
+                                        <p class="price"><span>138,000</span>원~</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="box">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="/img/package_busan02.jpg" alt="부산의 송도해수욕장 이미지입니다.">
+                                    </div>
+                                    <div class="package_info">
+                                        <p class="tour_title">부산 1박 2일 + 호텔 조식제공 + 자유시간</p>
+                                        <p class="hash_tag">
+                                            <span>#해운대</span>
+                                            <span>#광안리해수욕장</span>
+                                            <span>#동백섬</span>
+                                        </p>
+                                        <p class="price"><span>235,000</span>원~</p>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="box">
+                                <a href="#">
+                                    <div class="img_wrap">
+                                        <img src="/img/package_busan03.jpg" alt="부산의 용두산공원 이미지입니다.">
+                                    </div>
+                                    <div class="package_info">
+                                        <p class="tour_title">[서울역 출발] 부산 3박4일 + 호텔 프리미엄</p>
+                                        <p class="hash_tag">
+                                            <span>#다대포해수욕장</span>
+                                            <span>#부산항대교</span>
+                                            <span>#대저생태공원</span>
+                                        </p>
+                                        <p class="price"><span>412,000</span>원~</p>
+                                    </div>
+                                </a>
                             </div>
                         </div>
                     </div>
@@ -419,7 +470,7 @@
                 </div>
                 <div class="air">
                     <div class="img"></div>
-                    <p class="air_name">이스타항공</p>
+                    <p class="air_name">진에어</p>
                 </div>
             </div>
         </div>

@@ -10,7 +10,8 @@
     }
     .h_top {
         // background-color: #56d5e8;
-        background-color: #00d3ff;
+        // background-color: #00d3ff;
+        background-color: #368aff;
         .sns {
             display: flex;
             li {
@@ -128,20 +129,29 @@
                     position: absolute; left: 50%; top: 50%;
                     transform: translate(-50%,-50%);
                     color: #fff; text-align: center;
+                    > h2, p {text-shadow: 0 5px 10px rgba(0,0,0,0.5);}
                     .slide_title {
                         font-size: 50px;
                         margin-bottom: 38px;
+                        line-height: 58px;
                     }
                     .sub_text {
                         font-size: 25px;
-                        line-height: 30px;
+                        line-height: 35px;
                         margin-bottom: 40px;
                     }
                     .slide_btn {
+                        width: 120px; line-height: 50px;
+                        background-color: #79e0ff;
+                        margin: 0 auto;
+                        border-radius: 10px;
+                        box-shadow: 0 5px 10px rgba(0,0,0,0.5);
                         a {
-                            color: #fff; background-color: skyblue;
-                            padding: 8px 20px; border-radius: 10px;
-                            font-size: 15px;
+                            display: block;
+                            width: 100%; height: 100%;
+                            color: #fff;
+                            // padding: 8px 20px;
+                            font-size: 17px;
                         }
                     }
                 }
@@ -181,7 +191,7 @@
         display: flex; justify-content: center;
         padding-top: 120px;
         .center {
-            width: 57%;
+            width: 70%;
             .title_box {
                 .title {text-align: center; margin-bottom: 25px; font-size: 30px;}
                 .sub_title {text-align: center; margin-bottom: 80px; font-size: 15px;}
@@ -190,7 +200,7 @@
                 display: flex; justify-content: space-between;
                 flex-wrap: wrap;
                 .local_box {
-                    width: 32%; height: 250px;
+                    width: 32%; height: 300px;
                     background-repeat: no-repeat;
                     background-size: cover;
                     position: relative;
@@ -239,8 +249,8 @@
     //메인페이지 local_video 영역
     .local_video {
         display: flex; justify-content: center;
-        padding: 100px 0; margin: 180px 0;
-        background-color: #eeeeee;
+        padding: 100px 0 150px; margin: 180px 0;
+        background-color: #edf6ff;
         .center {
             width: 100%;
             .title_box {
@@ -258,24 +268,30 @@
                     height: 500px;
                     .box_list {
                         height: 23%;
-                        background-color: pink;
+                        background-color: #d6e7ff;
                         margin-bottom: 1.5%;
-                        border-radius: 5px;
+                        border-radius: 10px;
                         padding: 25px 30px;
                         box-sizing: border-box;
                         display: flex;
                         align-items: center;
                         box-shadow: 1px 3px 5px rgba(0,0,0,0.2);
                         &:last-child {margin-bottom: 0;}
-                        .icon {
-                            font-size: 55px; margin-right: 35px;
+                        .phcheon_img {
+                            display: block;  margin-right: 30px;
+                            width: 80px; height: 80px;
+                            border-radius: 50%;
                         }
                         .text_box {
                             .text1 {
                                 font-size: 20px; margin-bottom: 8px;
                                 font-weight: 600;
+                                a {color: #160a01;}
                             }
-                            .text2 {font-size: 15px; line-height: 21px;}
+                            .text2 {
+                                font-size: 15px; line-height: 21px;
+                                color: #3f3f3f;
+                            }
                         }
                     }
                 }
@@ -295,29 +311,34 @@
             .bus_wrap {
                 display: flex; justify-content: space-between;
                 .bus_box {
-                    width: 22%;
-                    background-color: #eee;
+                    width: 23%;
+                    background-color: #fff;
+                    border: 1px solid #cbcbcb;
                     border-radius: 10px;
                     overflow: hidden;
                     box-shadow: 2px 2px 5px rgba(0,0,0,0.3);
                     transition: all 0.5s;
                     &:hover {transform: translateY(-50px);}
-                    .tour_img {
-                        img {width: 100%;}
-                    }
-                    .tour_info {
-                        padding: 10px;
-                        .tour_title {
-                            margin-top: 2px; font-size: 18px;
-                            font-weight: 600;
+                    a {
+                        color: #000;
+                        .tour_img {
+                            img {width: 100%;}
                         }
-                        .hash_tag {
-                            margin-top: 7px; font-size: 15px;
-                            span {margin-right: 5px;}
-                        }
-                        .price {
-                            margin: 10px 0 5px;
-                            span {font-size: 22px; font-weight: 600;}
+                        .tour_info {
+                            padding: 10px;
+                            .tour_title {
+                                margin-top: 6px; font-size: 21px;
+                                font-weight: 600;
+                            }
+                            .hash_tag {
+                                margin-top: 12px; font-size: 15px;
+                                color: #313131;
+                                span {margin-right: 5px;}
+                            }
+                            .price {
+                                margin: 17px 0 15px;
+                                span {font-size: 22px; font-weight: 600;}
+                            }
                         }
                     }
                 }
@@ -326,16 +347,23 @@
     }
     //메인페이지 local_count 영역
     .local_count {
-        width: 100%; height: 320px;
+        width: 100%; height: 420px;
         display: flex; justify-content: center;
         align-items: center;
-        background-image: url(/img/popular.jpg);
+        background-image: url(/img/count_bg.jpg);
+        background-position: center;
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
         margin-bottom: 300px;
         .center {
             width: 57%;
+            .title_box {
+                .title {
+                    text-align: center; margin-bottom: 50px; font-size: 30px;
+                    color: #fff; text-shadow: 0px 5px 10px rgba(0,0,0,0.5);
+                }
+            }
             .count_wrap {
                 display: flex; justify-content: space-between;
                 .count_box {
@@ -344,6 +372,7 @@
                     background-color: #fff;
                     border-radius: 10px;
                     padding: 20px 5px;
+                    box-shadow: 0px 5px 10px rgba(0,0,0,0.5);
                     .img {
                         height: 95px;
                         margin-bottom: 20px;
@@ -366,10 +395,10 @@
                 .sub_title {text-align: center; margin-bottom: 80px; font-size: 15px;}
             }
             .package_wrap {
-                width: 100%; height: 400px;
+                width: 100%;
                 display: flex; position: relative;
                 .left {
-                    width: 40%; height: 100%;
+                    width: 40%; height: 450px;
                     background-image: url("/img/popular.jpg");
                     background-repeat: no-repeat;
                     background-size: cover;
@@ -405,25 +434,35 @@
                         opacity: 0;
                         transition: all 0.5s;
                         .box {
-                            margin-right: 20px;
-                            border: 1px solid #000;
+                            width: 31.333%;
+                            margin-right: 2%;
+                            border: 1px solid #cbcbcb;
                             border-radius: 10px;
                             overflow: hidden;
-                            background-color: #dbdbdb;
-                            img {width: 100%;}
-                            .package_info {
-                                padding: 10px;
-                                .tour_title {
-                                    margin-top: 2px; font-size: 18px;
-                                    font-weight: 600;
+                            background-color: #fff;
+                            a {
+                                color: #000;
+                                .img_wrap {
+                                    width: 100%; height: 230px;
+                                    img {width: 100%; height: 100%;}
                                 }
-                                .hash_tag {
-                                    margin-top: 7px; font-size: 15px;
-                                    span {margin-right: 5px;}
-                                }
-                                .price {
-                                    margin: 10px 0 5px;
-                                    span {font-size: 22px; font-weight: 600;}
+                                .package_info {
+                                    padding: 10px;
+                                    .tour_title {
+                                        margin-top: 2px; font-size: 18px;
+                                        font-weight: 600;
+                                    }
+                                    .hash_tag {
+                                        margin-top: 7px; font-size: 15px;
+                                        color: #313131;
+                                        span {margin-right: 5px;}
+                                    }
+                                    .price {
+                                        margin: 10px 0 13px;
+                                        span {
+                                            font-size: 22px; font-weight: 600;
+                                        }
+                                    }
                                 }
                             }
                         }
@@ -961,7 +1000,7 @@
         .center {width: 57%; margin: 0 auto;}
     }
     .f_top {
-        background-color: olivedrab;
+        background-color: #ffb51e;
         .center {
             .f_menu {
                 display: flex;
@@ -988,8 +1027,8 @@
                 // span {margin-right: 8px;}
                 .bar {
                     &::after {
-                        content: ""; width: 2px; height: 11px;
-                        background-color: #0f754b; display: inline-block;
+                        content: ""; width: 1px; height: 11px;
+                        background-color: #0080a3; display: inline-block;
                         left: 0; top: 0; margin: 0 6px;
                         position: relative; top: 1px; left: 1px;
                     }

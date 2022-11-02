@@ -47,7 +47,7 @@ let auto_slide = setInterval(()=>{
     // 화면 바뀔때마다 동그라미 버튼도 바꿔줌
     circle_on();
     // 2초마다 넘김
-},2000);
+},50000);
 
 // 마우스 올리면 자동실행 멈춤
 slide_wrap.addEventListener("mouseenter",()=>{
@@ -60,7 +60,7 @@ slide_wrap.addEventListener("mouseleave",()=>{
     auto_slide = setInterval(()=>{
         next_slide();
         circle_on();
-    },2000);
+    },50000);
 });
 
 
