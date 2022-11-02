@@ -144,7 +144,7 @@
                     }
                     .slide_btn {
                         width: 120px; line-height: 50px;
-                        background-color: #79e0ff;
+                        background-color: #1ab3e1 ;
                         margin: 0 auto;
                         border-radius: 10px;
                         box-shadow: 0 5px 10px rgba(0,0,0,0.5);
@@ -191,8 +191,10 @@
     //메인페이지 popular_local 영역
     .popular_local {
         display: flex; justify-content: center;
-        padding-top: 120px;
+        padding: 120px 0 76px;
         overflow: hidden;
+
+        background-color: #aaa;
         .center {
             width: 70%;
             .title_box {
@@ -264,22 +266,13 @@
             }
         }
     }
-    .section.on {
-        //클래스 'on' 붙은 popular_local 영역
-        .center {
-            .local_wrap {
-                .local_box {
-                    &:nth-child(1),&:nth-child(3) {transform: translateX(0);}
-                    &:nth-child(2),&:nth-child(4),&:nth-child(5) {transform: translateY(0);}
-                }
-            }
-        }
-    }
     //메인페이지 local_video 영역
     .local_video {
         display: flex; justify-content: center;
-        padding: 100px 0 150px; margin: 180px 0;
+        padding: 150px 0 200px;
+        overflow: hidden;
         // background-color: #edf6ff;
+        background: #bbb;
         .center {
             width: 100%;
             .title_box {
@@ -288,13 +281,18 @@
             }
             .context_wrap {
                 display: flex; align-items: center;
-                > div {width: 50%; margin: 0 30px;}
+                > div {
+                    width: 50%; margin: 0 30px;
+                    transition: all 0.5s;
+                }
                 .left {
                     height: 500px;
+                    transform: translateX(-200%);
                     video {width: 100%; height: 100%;}
                 }
                 .right {
                     height: 500px;
+                    transform: translateX(200%);
                     .box_list {
                         height: 23%;
                         background-color: #d6e7ff;
@@ -330,9 +328,9 @@
     //메인페이지 tour_bus 영역
     .tour_bus {
         display: flex; justify-content: center;
-        padding: 100px 0 200px;
-        margin-bottom: 400px;
+        padding: 150px 0 325px;
         background-color: #edf6ff;
+        overflow: hidden;
         .center {
             width: 70%;
             .title_box {
@@ -341,6 +339,8 @@
             }
             .bus_wrap {
                 display: flex; justify-content: space-between;
+                transform: translateY(-205%);
+                transition: all 0.5s;
                 .bus_box {
                     width: 23%;
                     background-color: #fff;
@@ -386,7 +386,9 @@
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
-        margin-bottom: 300px;
+        margin: 200px 0 250px;
+
+        background-color: #ccc;
         .center {
             width: 57%;
             .title_box {
@@ -418,7 +420,10 @@
     //메인페이지 package 영역
     .package {
         display: flex; justify-content: center;
-        margin-bottom: 300px;
+        padding: 150px 0 193px;
+        overflow: hidden;
+
+        background-color: #ddd;
         .center {
             width: 57%;
             .title_box {
@@ -428,6 +433,7 @@
             .package_wrap {
                 width: 100%;
                 display: flex; position: relative;
+                > div {transition: all 0.5s;}
                 .left {
                     width: 40%; height: 450px;
                     background-image: url("/img/package_left.jpg");
@@ -435,6 +441,7 @@
                     background-size: cover;
                     padding: 87px 0 0 20px;
                     border-radius: 10px;
+                    transform: translateX(-200%);
                     .big_text {
                         font-size: 30px; line-height: 35px;
                         margin-bottom: 50px;
@@ -458,8 +465,7 @@
                     }
                 }
                 .right {
-                    width: 100%; position: absolute; left: 343px; top: 25%;
-                    
+                    width: 100%; position: absolute; left: 343px; top: 200%;
                     .local {
                         position: absolute;
                         left: 0; top: 0;
@@ -513,8 +519,36 @@
     }
     //메인페이지 map 영역
     .comp_map {
+        padding: 150px 0 180px;
+        background-color: #eee;
+        .title {text-align: center; margin-bottom: 50px;}
         #map {
             width: 100%; height: 500px;
+        }
+    }
+    // 클래스 'on'이 붙었을 때
+    .section.on {
+        .center {
+            //클래스 'on' 붙은 popular_local 영역
+            .local_wrap {
+                .local_box {
+                    &:nth-child(1),&:nth-child(3) {transform: translateX(0);}
+                    &:nth-child(2),&:nth-child(4),&:nth-child(5) {transform: translateY(0);}
+                }
+            }
+            //클래스 'on' 붙은 local_video 영역
+            .context_wrap {
+                > div {transform: translate(0);}
+            }
+            //클래스 'on' 붙은 tour_bus 영역
+            .bus_wrap {
+                transform: translate(0);
+            }
+            //클래스 'on' 붙은 package 영역
+            .package_wrap {
+                .left {transform: translate(0);}
+                .right {top: 25%;}
+            }
         }
     }
     // 배너
@@ -663,7 +697,8 @@
                     border-bottom: 1px solid #555;
                     .user_img {
                         margin: 50px auto 40px;
-                        width: 100%; height: 600px;
+                        width: 100%;
+                        // height: 600px;
                         img {
                             width: 100%; height: 100%;
                             border-radius: 5px;
@@ -822,6 +857,7 @@
             .sub_popular_local,.theme_hotel {
                 .subtitle {
                     text-align: center;
+                    span {color: #00d3ff;}
                 }
                 .local_list_wrap,.theme_list_wrap {
                     width: 100%;
@@ -903,11 +939,27 @@
             .hotel_box_wrap {
                 display: flex; justify-content: space-between;
                 align-items: center; flex-wrap: wrap;
-                .hotel_box {
+                a {
                     width: 31.333%; margin: 1%;
-                    height: 300px;
-                    display: block;
-                    img {width: 100%; height: 100%;}
+                    color: #000;
+                    .hotel_box {
+                        .img_wrap {
+                            width: 100%; height: 267px;
+                            margin-bottom: 12px;
+                            img {
+                                width: 100%; height: 100%;
+                                border-radius: 10px;
+                            }
+                        }
+                        .rank {
+                            margin-bottom: 5px;
+                            i {color: #ffe600; margin-right: 5px;}
+                        }
+                        .hotel_title {
+                            font-size: 18px; font-weight: 600;
+                            margin-bottom: 10px;
+                        }
+                    }
                 }
             }
         }

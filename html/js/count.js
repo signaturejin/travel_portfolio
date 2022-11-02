@@ -50,7 +50,7 @@ window.addEventListener("scroll",()=>{
     let target = document.querySelector(".local_count").offsetTop;
 
     // 조건문을 사용하여 현재 위치값이 도달 구간의 위치값과 크거나 같을 때 카운트 시작
-    if(scTop >= target){
+    if(scTop >= target - 180){
         if(stop == true){
             // 반복문을 사용하여 배열객체 모두를 대상으로 삼음
             countList.forEach((item,index)=>{
