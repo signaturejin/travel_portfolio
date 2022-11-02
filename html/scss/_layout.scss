@@ -2,7 +2,7 @@
 //상단영역
 #header {
     margin: 0 auto; z-index: 99;
-    box-shadow: 5px 5px 10px rgba(0,0,0,0.4);
+    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
     .center {
         margin: 0 auto; display: flex;
         justify-content: space-between;
@@ -17,7 +17,9 @@
             li {
                 margin-right: 25px;
                 font-size: 15px;
-                a {color: #fff;}
+                a {
+                    color: #fff;
+                }
             }
         }
         .right_box {
@@ -26,7 +28,7 @@
                 line-height: 40px;
                 margin-left: 20px;
                 position: relative;
-                span {font-size: 13px;}
+                span {font-size: 13px; color: #fff;}
                 &::after {
                     content: ""; display: inline-block;
                     position: absolute; top: 16px;
@@ -528,7 +530,7 @@
             width: 57%; display: flex; align-items: center;
             z-index: 98;
             .text_box {
-                color: #fff; background-color: #686868;
+                color: #fff; background-color: rgba(0,0,0,0.4);
                 padding: 50px; border-radius: 10px;
                 .title {
                     margin-bottom: 15px;
@@ -537,10 +539,10 @@
                     margin-bottom: 50px; line-height: 20px;
                 }
                 .go_insert {
-                    color: #fff; background-color: #27aa78;
+                    color: #fff; background-color: #399cd1;
                     display: inline-block; padding: 20px;
                     box-sizing: border-box;
-                    border-radius: 5px; font-size: 21px;
+                    border-radius: 10px; font-size: 21px;
                 }
             }
         }
@@ -551,9 +553,8 @@
     //목록페이지
     .travel_list {
         display: flex; justify-content: center;
-        background-color: orange;
         .center {
-            width: 57%; background-color: palegoldenrod;
+            width: 57%; background-color: #aedef7;
             padding: 50px; box-sizing: border-box;
             .list_wrap {
                 // margin-top: 50px;
@@ -570,7 +571,7 @@
                     display: flex; justify-content: space-between;
                     align-items: center; padding: 30px;
                     box-sizing: border-box; margin-bottom: 30px;
-                    border-radius: 5px;
+                    border-radius: 10px;
                     .left {
                         width: 70%;
                         .user_name {
@@ -605,7 +606,7 @@
                         
                         img {
                             width: 100%; height: 100%;
-                            border-radius: 5px;
+                            border-radius: 10px;
                         }
                     }
                 }
@@ -613,11 +614,11 @@
             .btn_wrap {
                 display: flex; justify-content: flex-end;
                 .write_btn {
-                    background-color: pink;
+                    background-color: #fff;
                     display: inline-block;
                     width: 85px; line-height: 45px;
                     color: #505050; text-align: center;
-                    border-radius: 5px;
+                    border-radius: 10px;
                 }
             }
         }
@@ -721,7 +722,7 @@
     .insert_wrap,.update_wrap {
         display: flex; justify-content: center;
         .center {
-            width: 57%; background-color: #ff8119;
+            width: 57%;
             > h3 {
                 font-size: 30px; text-align: center;
                 margin: 55px 0 50px;
@@ -746,7 +747,7 @@
                             height: 40px; width: 70%;
                             padding-left: 12px;
                             border-radius: 5px;
-                            border: 1px solid #000;
+                            border: 1px solid #cdcdcd;
                         }
                     }
                     .name_box {
@@ -757,11 +758,11 @@
                         }
                         .name {
                             width: 60%;
-                            background-color: #949494;
+                            background-color: #c3c3c3;
                             color: #353535;
                             padding: 10px 12px ;
                             border-radius: 5px;
-                            border: 1px solid #585858;
+                            border: 1px solid #cdcdcd;
                             margin-right: 20px;
                             box-sizing: border-box;
                         }
@@ -775,14 +776,14 @@
                     // .file {background-color: orange;}
                 }
                 .bar {
-                    width: 100%; height: 2px; background-color: red;
+                    width: 100%; height: 2px; background-color: #368aff;
                     border-radius: 10px; margin: 10px 0 20px;
                 }
                 .context_wrap {
                     padding: 0 20px;
                     .context {
-                        padding: 12px; border: 1px solid #000; height: 550px;
-                        border-radius: 5px; width: 100%; box-sizing: border-box;
+                        padding: 12px; border: 1px solid #cdcdcd; height: 550px;
+                        border-radius: 10px; width: 100%; box-sizing: border-box;
                         font-size: 16px;
                     }
                 }
@@ -790,9 +791,9 @@
                     display: flex; justify-content: flex-end;
                     padding: 20px 20px;
                     #sub_btn,#upt_btn {
-                        width: 100px; height: 35px;
-                        border-radius: 5px; border: none;
-                        background-color: #27aa78; color: #ffffff;
+                        width: 100px; height: 40px;
+                        border-radius: 10px; border: none;
+                        background-color: #368aff; color: #fff;
                         cursor: pointer;
                     }
                 }
