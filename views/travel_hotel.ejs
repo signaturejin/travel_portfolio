@@ -11,6 +11,7 @@
 <body>
     <%- include("common/header.ejs"); %>
     <div id="container">
+        <%- include("common/banner.ejs"); %>
         <!-- where 영역 -->
         <div class="where">
             <div class="center">
@@ -136,11 +137,11 @@
         <div class="many_hotel">
             <div class="center">
                 <div class="text_box">
-                    <h3 class="title">이달 특가<span> 숙소</span></h3>
+                    <h3 class="title">이 달의<span> 특가</span> 숙소</h3>
                     <p class="sub_title">최저가로 숙소를 구해보아요~</p>
                 </div>
                 <div class="hotel_box_wrap">
-                    <a href="#">
+                    <a class="hotel" href="#">
                         <div class="hotel_box">
                             <div class="img_wrap">
                                 <img src="/img/sub_hotel01.jpg" alt="호텔 이미지입니다.">
@@ -253,9 +254,48 @@
                 <a class="more_btn" href="">더보기<i class="fa-solid fa-plus"></i></a>
             </div>
         </div>
+        <!-- notice 영역 -->
+        <div class="notice">
+            <div class="center">
+                <div class="notice_wrap">
+                    <a href="#">
+                        <div class="notice_box">
+                            <span class="material-symbols-outlined">content_paste</span>
+                            <p>공지사항</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="notice_box">
+                            <span class="material-symbols-outlined">help</span>
+                            <p>FAQ</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="notice_box">
+                            <span class="material-symbols-outlined">savings</span>
+                            <p>마일리지</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="notice_box">
+                            <span class="material-symbols-outlined">phone_in_talk</span>
+                            <p>상담전화</p>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="notice_box">
+                            <span class="material-symbols-outlined">luggage</span>
+                            <p>예약정보</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
     </div>
     <!-- 맨 위로 가는 기능 -->
     <%- include("common/go_top.ejs"); %>
     <%- include("common/footer.ejs"); %>
+    <!-- js -->
+    <script src="/js/sub_more_hotel.js"></script>
 </body>
 </html>

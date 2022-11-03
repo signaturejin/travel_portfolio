@@ -1,0 +1,66 @@
+//1200px 이하 반응형
+@media screen and (max-width:1200px) {
+    // 상단영역
+    #header {
+        .center {width: 77%;}
+        .h_bot {
+            .gnb {
+                > li {margin-left: 40px;}
+            }
+        }
+    }
+    // 중간영역
+    #container {
+        // 메인페이지 popular_local 영역
+        .popular_local {
+            .center {
+                width: 78%;
+            }
+        }
+        //메인페이지 local_video 영역
+        .local_video {
+            .center {
+                .context_wrap {
+                    flex-direction: column;
+                    > div {width: 77%;}
+                    .left {
+                        margin-bottom: 50px;
+                    }
+                }
+            }
+        }
+        //메인페이지 tour_bus 영역
+        .tour_bus {
+            .center {
+                width: 78%;
+                .bus_wrap {
+                    transform: translateY(-215%);
+                    flex-wrap: wrap;
+                    .bus_box {
+                        width: 45%;
+                    }
+                }
+            }
+        }
+        //메인페이지 local_count 영역
+        .local_count {
+            .center {
+                width: 78%;
+            }
+        }
+        //메인페이지 package 영역
+        .package {
+            .center {
+                width: 78%;
+                .package_wrap {
+                    .right {
+                        .local {
+                            left: -30px;
+                            .box {width: 24.333%;}
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
