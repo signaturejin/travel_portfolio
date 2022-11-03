@@ -20,11 +20,15 @@
         //메인페이지 local_video 영역
         .local_video {
             .center {
+                width: 78%;
                 .context_wrap {
                     flex-direction: column;
-                    > div {width: 77%;}
+                    > div {width: 100%;}
                     .left {
                         margin-bottom: 50px;
+                    }
+                    .right {
+                        .box_list {margin-bottom: 15px;}
                     }
                 }
             }

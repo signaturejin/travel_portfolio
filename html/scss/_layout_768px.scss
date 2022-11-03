@@ -1,8 +1,8 @@
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 768px) {
     // 상단영역
     #header {
         > div {
-            .center {width: 80%;}
+            .center {width: 90%;}
         }
         .h_bot {
             .center {
@@ -22,26 +22,23 @@
         // 메인페이지 popular_local 영역
         .popular_local {
             .center {
-                width: 80%;
+                width: 90%;
             }
         }
-        //메인페이지 tour_bus 영역
-        .tour_bus {
+        //메인페이지 local_video 영역
+        .local_video {
             .center {
-                width: 80%;
-                .bus_wrap {
-                    transform: translateY(-215%);
-                    flex-wrap: wrap;
-                    .bus_box {
-                        width: 45%;
-                    }
+                width: 90%;
+                .context_wrap {
+                    > div {width: 100%;}
+                    .left {margin-bottom: 0;}
                 }
             }
         }
         //메인페이지 tour_bus 영역
         .tour_bus {
             .center {
-                width: 80%;
+                width: 90%;
                 .bus_wrap {
                     transform: translateY(-215%);
                     flex-wrap: wrap;
@@ -54,38 +51,27 @@
         //메인페이지 local_count 영역
         .local_count {
             .center {
-                width: 80%;
+                width: 90%;
+                .count_wrap {
+                    flex-wrap: wrap; justify-content: center;
+                    .count_box {
+                        width: 22%;
+                        margin: 2%;
+                        &:last-child {width: 49%;}
+                    }
+                }
             }
         }
         //메인페이지 package 영역
         .package {
             .center {
-                width: 78%;
+                width: 90%;
                 .package_wrap {
-                    flex-wrap: wrap;
-                    .left {
-                        width: 100%; height: 315px;
-                        margin-bottom: 35px;
-                        .big_text {
-                            padding: 20px 30px;
-                            margin-bottom: 0;
-                        }
-                    }
-                    .right {
-                        position: relative;
-                        right: -100%;
-                        height: 285px;
-                        // width: ;
-                        .local {
-                            left: 0;
-                            .box {
-                                width: 34.333%;
-                                &:last-child {
-                                    margin-right: 0;
-                                }
-                            }
-                        }
-                    }
+                    // .right {
+                    //     .local {
+                    //         left: 390px;
+                    //     }
+                    // }
                 }
             }
         }
@@ -96,6 +82,22 @@
                 .package_wrap {
                     .right {left: 0;}
                 }
+            }
+        }
+    }
+    // 하단영역
+    #footer {
+        > div {
+            .center {width: 95%;}
+        }
+        .f_top {
+            .f_menu {justify-content: center;} 
+        }
+        .f_bot {
+            .center {
+                flex-direction: column;
+                .left {width: 10%; margin: 5px 0 13px;}
+                .right {text-align: center;}
             }
         }
     }

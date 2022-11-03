@@ -1,0 +1,80 @@
+@media screen and (max-width: 580px) {
+    // 상단영역
+    #header {
+        > div {
+            .center {width: 95%;}
+        }
+    }
+    // 중간영역
+    #container {
+        // 메인페이지 popular_local 영역
+        .popular_local {
+            .center {
+                width: 95%;
+                .local_wrap {
+                    flex-direction: column;
+                    .local_box {
+                        width: 100%;
+                        &:nth-child(2) {transform: translateY(-300%);}
+                        &:nth-child(4) {width: 100%;}
+                    }
+                }
+            }
+        }
+        //메인페이지 local_video 영역
+        .local_video {
+            .center {
+                width: 95%;
+                .context_wrap {
+                    > div {width: 100%;}
+                    .left {margin-bottom: 30px;}
+                    .right {
+                        .box_list {
+                            flex-direction: column;
+                            .phcheon_img {margin-right: 0;}
+                            .text_box {
+                                .text1 {
+                                    text-align: center;
+                                    margin: 10px 0;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        //메인페이지 tour_bus 영역
+        .tour_bus {
+            .center {
+                width: 95%;
+                .bus_wrap {
+                    transform: translateY(215%);
+                    flex-wrap: wrap;
+                    .bus_box {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+        //메인페이지 local_count 영역
+        .local_count {
+            .center {
+                width: 95%;
+                .count_wrap {
+                    flex-wrap: wrap; justify-content: center;
+                    .count_box {
+                        width: 45%;
+                        margin: 1%;
+                        &:last-child {width: 100%;}
+                    }
+                }
+            }
+        }
+        //메인페이지 package 영역
+        .package {
+            .center {
+                width: 95%;
+            }
+        }
+    }
+}
