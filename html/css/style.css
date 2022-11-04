@@ -178,7 +178,7 @@ body::-webkit-scrollbar-track {
 #header .mobile_board {
   position: absolute;
   top: 0;
-  right: -100%;
+  right: -120%;
   width: 500px;
   height: 100vh;
   padding: 20px 35px;
@@ -1174,7 +1174,6 @@ body::-webkit-scrollbar-track {
   display: flex;
   justify-content: center;
   padding: 120px 0 150px;
-  background-color: #aaa;
 }
 #container .where .center {
   width: 57%;
@@ -1190,7 +1189,7 @@ body::-webkit-scrollbar-track {
   font-size: 18px;
 }
 #container .where .center .sub_popular_local .subtitle span, #container .where .center .theme_hotel .subtitle span {
-  color: #00d3ff;
+  color: #049df7;
 }
 #container .where .center .sub_popular_local .local_list_wrap, #container .where .center .sub_popular_local .theme_list_wrap, #container .where .center .theme_hotel .local_list_wrap, #container .where .center .theme_hotel .theme_list_wrap {
   width: 100%;
@@ -1236,12 +1235,12 @@ body::-webkit-scrollbar-track {
   justify-content: center;
 }
 #container .where .center .btn_wrap .hotel_more {
-  background-color: #00d3ff;
+  background-color: #049df7;
   display: block;
   padding: 10px 20px;
   border-radius: 10px;
   font-size: 14px;
-  color: #341300;
+  color: #fff;
 }
 #container .where .center .btn_wrap .hotel_more i {
   margin-left: 7px;
@@ -1265,7 +1264,6 @@ body::-webkit-scrollbar-track {
   display: flex;
   justify-content: center;
   padding: 100px 0 120px;
-  background-color: rgb(221, 221, 221);
 }
 #container .many_hotel .center {
   width: 57%;
@@ -1279,7 +1277,7 @@ body::-webkit-scrollbar-track {
   margin-bottom: 15px;
 }
 #container .many_hotel .center .text_box .title span {
-  color: #00d3ff;
+  color: #049df7;
 }
 #container .many_hotel .center .text_box .sub_title {
   font-size: 15px;
@@ -1290,62 +1288,65 @@ body::-webkit-scrollbar-track {
   align-items: center;
   flex-wrap: wrap;
 }
-#container .many_hotel .center .hotel_box_wrap a {
+#container .many_hotel .center .hotel_box_wrap .hotel_box {
   width: 31.333%;
   margin: 1%;
   color: #000;
   display: none;
 }
-#container .many_hotel .center .hotel_box_wrap a:nth-child(1), #container .many_hotel .center .hotel_box_wrap a:nth-child(2), #container .many_hotel .center .hotel_box_wrap a:nth-child(3) {
-  display: flex;
+#container .many_hotel .center .hotel_box_wrap .hotel_box:nth-child(1), #container .many_hotel .center .hotel_box_wrap .hotel_box:nth-child(2), #container .many_hotel .center .hotel_box_wrap .hotel_box:nth-child(3) {
+  display: block;
 }
-#container .many_hotel .center .hotel_box_wrap a .hotel_box .img_wrap {
+#container .many_hotel .center .hotel_box_wrap .hotel_box > a {
+  color: #000;
+}
+#container .many_hotel .center .hotel_box_wrap .hotel_box > a .img_wrap {
   width: 100%;
   height: 267px;
   margin-bottom: 12px;
 }
-#container .many_hotel .center .hotel_box_wrap a .hotel_box .img_wrap img {
+#container .many_hotel .center .hotel_box_wrap .hotel_box > a .img_wrap img {
   width: 100%;
   height: 100%;
   border-radius: 10px;
 }
-#container .many_hotel .center .hotel_box_wrap a .hotel_box .rank {
+#container .many_hotel .center .hotel_box_wrap .hotel_box > a .rank {
   margin-bottom: 5px;
 }
-#container .many_hotel .center .hotel_box_wrap a .hotel_box .rank i {
-  color: #ffe600;
+#container .many_hotel .center .hotel_box_wrap .hotel_box > a .rank i {
+  color: #ffc137;
   margin-right: 5px;
 }
-#container .many_hotel .center .hotel_box_wrap a .hotel_box .hotel_title {
+#container .many_hotel .center .hotel_box_wrap .hotel_box > a .hotel_title {
   font-size: 18px;
   font-weight: 600;
   margin-bottom: 10px;
 }
-#container .many_hotel .center .hotel_box_wrap a .hotel_box .price {
+#container .many_hotel .center .hotel_box_wrap .hotel_box > a .price {
   padding-bottom: 25px;
 }
-#container .many_hotel .center .hotel_box_wrap a .hotel_box .price span {
+#container .many_hotel .center .hotel_box_wrap .hotel_box > a .price span {
   font-size: 20px;
   font-weight: 600;
 }
 #container .many_hotel .center .more_btn {
   width: 180px;
   line-height: 38px;
-  background-color: #00d3ff;
+  background-color: #049df7;
   display: block;
   text-align: center;
   margin: 10px auto 0;
   border-radius: 10px;
-  color: #341300;
+  color: #fff;
 }
 #container .notice {
   display: flex;
   justify-content: center;
-  background-color: #1898c5;
+  background-color: #74b2ed;
   padding: 100px 0;
 }
 #container .notice .center {
-  width: 70%;
+  width: 57%;
 }
 #container .notice .center .notice_wrap {
   display: flex;
@@ -1356,11 +1357,11 @@ body::-webkit-scrollbar-track {
   color: #fff;
 }
 #container .notice .center .notice_wrap .notice_box span {
-  font-size: 120px;
+  font-size: 65px;
   margin-bottom: 20px;
 }
 #container .notice .center .notice_wrap .notice_box p {
-  font-size: 30px;
+  font-size: 23px;
   font-weight: 600;
 }
 
@@ -1427,14 +1428,15 @@ body::-webkit-scrollbar-track {
   width: 30%;
 }
 #login .center .login_wrap {
-  background-color: #ffb773;
-  border-radius: 5px;
+  background-color: #7cbcef;
+  border-radius: 10px;
   padding: 50px;
   box-sizing: border-box;
+  color: #fff;
 }
 #login .center .login_wrap .logo_wrap {
-  width: 25%;
-  margin: 0 auto 10px;
+  width: 23%;
+  margin: 0 auto 16px;
 }
 #login .center .login_wrap .logo_wrap img {
   width: 100%;
@@ -1462,47 +1464,49 @@ body::-webkit-scrollbar-track {
   box-sizing: border-box;
   padding-left: 12px;
   font-size: 22px;
-  border: 2px solid #666666;
+  border: 2px solid #858585;
   border-radius: 5px;
 }
 #login .center .login_wrap #login_form #login_btn {
   width: 100%;
   border: none;
   height: 55px;
-  border-radius: 5px;
-  color: #424242;
+  border-radius: 10px;
+  color: #fff;
   font-size: 22px;
   font-weight: 600;
   margin: 30px 0 10px;
+  background-color: #404040;
   cursor: pointer;
 }
 #login .center .login_wrap .go_join {
   text-align: center;
   font-size: 15px;
-  color: #666666;
+  color: #303030;
 }
 #login .center .login_wrap .go_join a {
   margin-left: 10px;
-  color: #464646;
+  color: #1e1e1e;
 }
 
 #join {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #ffb773;
+  background-color: #7cbcef;
 }
 #join .center {
   width: 50%;
 }
 #join .center .join_wrap {
   border-radius: 5px;
+  color: #fff;
   padding: 130px;
   box-sizing: border-box;
 }
 #join .center .join_wrap .logo_wrap {
-  width: 25%;
-  margin: 0 auto 10px;
+  width: 23%;
+  margin: 0 auto 16px;
 }
 #join .center .join_wrap .logo_wrap img {
   width: 100%;
@@ -1521,8 +1525,8 @@ body::-webkit-scrollbar-track {
 }
 #join .center #join_form .input_wrap label {
   display: block;
-  margin-bottom: 10px;
-  font-size: 17px;
+  margin-bottom: 13px;
+  font-size: 28px;
   font-weight: 600;
 }
 #join .center #join_form .input_wrap input {
@@ -1532,13 +1536,13 @@ body::-webkit-scrollbar-track {
   font-size: 17px;
   padding-left: 12px;
   border-radius: 5px;
-  border: 2px solid #666666;
+  border: 2px solid #858585;
 }
 #join .center #join_form .input_wrap .msg_box, #join .center #join_form .input_wrap .re_msg_box {
   width: 100%;
   position: absolute;
   left: 0;
-  top: 83px;
+  top: 96px;
   font-size: 13px;
   line-height: 15px;
 }
@@ -1547,20 +1551,21 @@ body::-webkit-scrollbar-track {
   border: none;
   height: 55px;
   border-radius: 5px;
-  color: #424242;
+  color: #fff;
   font-size: 22px;
   font-weight: 600;
   margin: 30px 0 10px;
+  background-color: #404040;
   cursor: pointer;
 }
 #join .center .go_login {
   text-align: center;
   font-size: 15px;
-  color: #666666;
+  color: #303030;
 }
 #join .center .go_login a {
   margin-left: 10px;
-  color: #464646;
+  color: #1e1e1e;
 }
 
 #footer {
@@ -1633,7 +1638,7 @@ body::-webkit-scrollbar-track {
     width: 77%;
   }
   #header .h_bot .gnb > li {
-    margin-left: 40px;
+    margin-left: 25px;
   }
   #container .popular_local .center {
     width: 78%;
@@ -1675,10 +1680,28 @@ body::-webkit-scrollbar-track {
   #container .package .center .package_wrap .right .local .box {
     width: 24.333%;
   }
+  #container .banner.list .center {
+    width: 78%;
+  }
+  #container .where .center {
+    width: 78%;
+  }
+  #container .many_hotel .center {
+    width: 78%;
+  }
+  #container .notice .center {
+    width: 78%;
+  }
+  #login .center {
+    width: 60%;
+  }
+  #join .center {
+    width: 80%;
+  }
 }
 @media screen and (max-width: 1000px) {
   #header > div .center {
-    width: 80%;
+    width: 85%;
   }
   #header .h_bot .center {
     height: 65px;
@@ -1691,10 +1714,10 @@ body::-webkit-scrollbar-track {
     display: block;
   }
   #container .popular_local .center {
-    width: 80%;
+    width: 85%;
   }
   #container .tour_bus .center {
-    width: 80%;
+    width: 85%;
   }
   #container .tour_bus .center .bus_wrap {
     transform: translateY(-215%);
@@ -1704,7 +1727,7 @@ body::-webkit-scrollbar-track {
     width: 45%;
   }
   #container .tour_bus .center {
-    width: 80%;
+    width: 85%;
   }
   #container .tour_bus .center .bus_wrap {
     transform: translateY(-215%);
@@ -1714,10 +1737,10 @@ body::-webkit-scrollbar-track {
     width: 45%;
   }
   #container .local_count .center {
-    width: 80%;
+    width: 85%;
   }
   #container .package .center {
-    width: 78%;
+    width: 85%;
   }
   #container .package .center .package_wrap {
     flex-wrap: wrap;
@@ -1747,6 +1770,28 @@ body::-webkit-scrollbar-track {
   }
   #container .section.on .center .package_wrap .right {
     left: 0;
+  }
+  #container .banner.list .center {
+    width: 85%;
+  }
+  #container .where .center {
+    width: 85%;
+  }
+  #container .where .center .sub_popular_local .local_list_wrap, #container .where .center .sub_popular_local .theme_list_wrap, #container .where .center .theme_hotel .local_list_wrap, #container .where .center .theme_hotel .theme_list_wrap {
+    flex-wrap: wrap;
+  }
+  #container .where .center .sub_popular_local .local_list_wrap > a, #container .where .center .sub_popular_local .theme_list_wrap > a, #container .where .center .theme_hotel .local_list_wrap > a, #container .where .center .theme_hotel .theme_list_wrap > a {
+    width: 48%;
+    margin: 1%;
+  }
+  #container .where .center .sub_popular_local .local_list_wrap > a .local_list, #container .where .center .sub_popular_local .local_list_wrap > a .theme_list, #container .where .center .sub_popular_local .theme_list_wrap > a .local_list, #container .where .center .sub_popular_local .theme_list_wrap > a .theme_list, #container .where .center .theme_hotel .local_list_wrap > a .local_list, #container .where .center .theme_hotel .local_list_wrap > a .theme_list, #container .where .center .theme_hotel .theme_list_wrap > a .local_list, #container .where .center .theme_hotel .theme_list_wrap > a .theme_list {
+    height: 320px;
+  }
+  #container .many_hotel .center {
+    width: 85%;
+  }
+  #container .notice .center {
+    width: 85%;
   }
 }
 @media screen and (max-width: 768px) {
@@ -1820,6 +1865,31 @@ body::-webkit-scrollbar-track {
   }
   #footer .f_bot .center .right {
     text-align: center;
+  }
+  #login .center {
+    width: 100%;
+  }
+  #login .center .login_wrap {
+    height: 100vh;
+    border-radius: 0;
+  }
+  #join .center {
+    width: 100%;
+  }
+  #join .center .join_wrap {
+    padding: 70px;
+  }
+  .banner.list .center {
+    width: 90%;
+  }
+  .where .center {
+    width: 90%;
+  }
+  .many_hotel .center {
+    width: 90%;
+  }
+  .notice .center {
+    width: 90%;
   }
 }
 @media screen and (max-width: 580px) {

@@ -2,7 +2,7 @@
     // 상단영역
     #header {
         > div {
-            .center {width: 80%;}
+            .center {width: 85%;}
         }
         .h_bot {
             .center {
@@ -22,13 +22,13 @@
         // 메인페이지 popular_local 영역
         .popular_local {
             .center {
-                width: 80%;
+                width: 85%;
             }
         }
         //메인페이지 tour_bus 영역
         .tour_bus {
             .center {
-                width: 80%;
+                width: 85%;
                 .bus_wrap {
                     transform: translateY(-215%);
                     flex-wrap: wrap;
@@ -41,7 +41,7 @@
         //메인페이지 tour_bus 영역
         .tour_bus {
             .center {
-                width: 80%;
+                width: 85%;
                 .bus_wrap {
                     transform: translateY(-215%);
                     flex-wrap: wrap;
@@ -54,13 +54,13 @@
         //메인페이지 local_count 영역
         .local_count {
             .center {
-                width: 80%;
+                width: 85%;
             }
         }
         //메인페이지 package 영역
         .package {
             .center {
-                width: 78%;
+                width: 85%;
                 .package_wrap {
                     flex-wrap: wrap;
                     .left {
@@ -97,6 +97,35 @@
                     .right {left: 0;}
                 }
             }
+        }
+        // 배너 영역
+        .banner.list {
+            .center {width: 85%;}
+        }
+        // 호텔페이지 where 영역
+        .where {
+            .center {
+                width: 85%;
+                .sub_popular_local,.theme_hotel {
+                    .local_list_wrap,.theme_list_wrap {
+                        flex-wrap: wrap;
+                        > a {
+                            width: 48%; margin: 1%;
+                            .local_list,.theme_list {
+                                height: 320px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        // 호텔페이지 many_hotel 영역
+        .many_hotel {
+            .center {width: 85%;}
+        }
+        // 호텔페이지 notice 영역
+        .notice {
+            .center {width: 85%;}
         }
     }
 }

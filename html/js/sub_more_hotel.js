@@ -1,5 +1,5 @@
 // 필요한 태그 생성
-const hotel_box = document.querySelectorAll(".hotel_box_wrap > a");
+const hotel_box = document.querySelectorAll(".hotel_box_wrap > .hotel_box");
 const more_btn = document.querySelector(".more_btn");
 
 // 시작 변수

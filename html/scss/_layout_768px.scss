@@ -101,4 +101,40 @@
             }
         }
     }
+    // 로그인 영역
+    #login {
+        // background-color: ;
+        .center {
+            width: 100%;
+            .login_wrap {
+                height: 100vh;
+                border-radius: 0;
+            }
+        }
+    }
+    // 회원가입 영역
+    #join {
+        .center {
+            width: 100%;
+            .join_wrap {
+                padding: 70px;
+            }
+        }
+    }
+    // 배너 영역
+    .banner.list {
+        .center {width: 90%;}
+    }
+    // 호텔페이지 where 영역
+    .where {
+        .center {width: 90%;}
+    }
+    // 호텔페이지 many_hotel 영역
+    .many_hotel {
+        .center {width: 90%;}
+    }
+    // 호텔페이지 notice 영역
+    .notice {
+        .center {width: 90%;}
+    }
 }
