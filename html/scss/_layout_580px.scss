@@ -76,5 +76,31 @@
                 width: 95%;
             }
         }
+        // 배너 영역
+        .banner.list {
+            .center {width: 95%;}
+        }
+        // 호텔페이지 where 영역
+        .where {
+            .center {
+                width: 95%;
+                .sub_popular_local,.theme_hotel {
+                    .local_list_wrap,.theme_list_wrap {
+                        flex-direction: column;
+                        > a {
+                            width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+        // 호텔페이지 many_hotel 영역
+        .many_hotel {
+            .center {width: 95%;}
+        }
+        // 호텔페이지 notice 영역
+        .notice {
+            .center {width: 95%;}
+        }
     }
 }

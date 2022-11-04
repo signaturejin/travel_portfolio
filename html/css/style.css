@@ -1957,4 +1957,22 @@ body::-webkit-scrollbar-track {
   #container .package .center {
     width: 95%;
   }
+  #container .banner.list .center {
+    width: 95%;
+  }
+  #container .where .center {
+    width: 95%;
+  }
+  #container .where .center .sub_popular_local .local_list_wrap, #container .where .center .sub_popular_local .theme_list_wrap, #container .where .center .theme_hotel .local_list_wrap, #container .where .center .theme_hotel .theme_list_wrap {
+    flex-direction: column;
+  }
+  #container .where .center .sub_popular_local .local_list_wrap > a, #container .where .center .sub_popular_local .theme_list_wrap > a, #container .where .center .theme_hotel .local_list_wrap > a, #container .where .center .theme_hotel .theme_list_wrap > a {
+    width: 100%;
+  }
+  #container .many_hotel .center {
+    width: 95%;
+  }
+  #container .notice .center {
+    width: 95%;
+  }
 }
